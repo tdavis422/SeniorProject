@@ -134,6 +134,7 @@
 	background: #C4C4C4;
 }
 #checkin{
+	/*CSS For Check In button*/
 	position: absolute;
 	width: 1483px;
 	height: 128px;
@@ -142,6 +143,7 @@
 	background: #C4C4C4;
 }
 #r1{
+	/*CSS for Xbox R1 Button*/
 	position: absolute;
 	width: 451px;
 	height: 165px;
@@ -150,6 +152,7 @@
 	background: #C4C4C4;
 }
 #r2{
+	/*CSS For Xbox R2 button*/
 	position: absolute;
 	width: 451px;
 	height: 165px;
@@ -158,6 +161,7 @@
 	background: #C4C4C4;
 }
 #r3{
+	/*CSS For Xbox R3 button*/
 	position: absolute;
 	width: 451px;
 	height: 165px;
@@ -166,6 +170,7 @@
 	background: #C4C4C4;
 }
 #r4{
+	/*CSS For Xbox R4 button*/
 	position: absolute;
 	width: 451px;
 	height: 165px;
@@ -174,6 +179,7 @@
 	background: #C4C4C4;
 }
 #b1{
+	/*CSS For Xbox B1 button*/
 	position: absolute;
 	width: 451px;
 	height: 165px;
@@ -182,6 +188,7 @@
 	background: #C4C4C4;
 }
 #b2{
+	/*CSS For Xbox B2 button*/
 	position: absolute;
 	width: 451px;
 	height: 165px;
@@ -190,6 +197,7 @@
 	background: #C4C4C4;
 }
 #b3{
+	/*CSS For Xbox B3 button*/
 	position: absolute;
 	width: 451px;
 	height: 165px;
@@ -198,6 +206,7 @@
 	background: #C4C4C4;
 }
 #b4{
+	/*CSS For Xbox B4 button*/
 	position: absolute;
 	width: 451px;
 	height: 165px;
@@ -206,6 +215,7 @@
 	background: #C4C4C4;
 }
 #studentSan{
+	/*CSS For Sanitize button for students*/
 	position: absolute;
 	width: 550px;
 	height: 133px;
@@ -214,6 +224,7 @@
 	background: #C4C4C4;
 }
 #studentDamaged{
+	/*CSS For Damaged button in Student*/
 	position: absolute;
 	width: 550px;
 	height: 133px;
@@ -222,6 +233,7 @@
 	background: #C4C4C4;
 }
 #superManRep{
+	/*CSS For Reports button in Supervisor/Manager*/
 	position: absolute;
 	width: 563px;
 	height: 157px;
@@ -230,6 +242,7 @@
 	background: #C4C4C4;
 }
 #superManDamaged{
+	/*CSS For View Damaged Items in Supervisor/Manager*/
 	position: absolute;
 	width: 563px;
 	height: 157px;
@@ -238,6 +251,7 @@
 	background: #C4C4C4;
 }
 #addRemove{
+	/*CSS For Add/Remove button in Supervisor/Manager*/
 	position: absolute;
 	width: 563px;
 	height: 157px;
@@ -246,6 +260,7 @@
 	background: #C4C4C4;
 }
 #superManClearData{
+	/*CSS For Clearing Data button in Supervisor/Manager*/
 	position: absolute;
 	width: 563px;
 	height: 157px;
@@ -254,6 +269,7 @@
 	background: #C4C4C4;
 }
 #allReport{
+	/*CSS for printing all reports button in Supervisor/Manager*/
 	position: absolute;
 	width: 725px;
 	height: 127px;
@@ -262,6 +278,7 @@
 	background: #C4C4C4;
 }
 #specificReport{
+	/*CSS For printing specific reports in Supervisor/Manager*/
 	position: absolute;
 	width: 725px;
 	height: 127px;
@@ -270,6 +287,7 @@
 	background: #C4C4C4;
 }
 #addWorker{
+	/*CSS for Add Worker button in Add/Remove*/
 	position: absolute;
 	width: 689px;
 	height: 151px;
@@ -278,6 +296,7 @@
 	background: #C4C4C4;
 }
 #removeWorker{
+	/*CSS For Remove Worker in Add/Remove*/
 	position: absolute;
 	width: 689px;
 	height: 151px;
@@ -286,6 +305,7 @@
 	background: #C4C4C4;
 }
 #addEquip{
+	/*CSS For Add Equipment in Add/Remove*/
 	position: absolute;
 	width: 689px;
 	height: 151px;
@@ -294,6 +314,7 @@
 	background: #C4C4C4;
 }
 #removeEquip{
+	/*CSS For Removing Equipment in Add/Remove*/
 	position: absolute;
 	width: 689px;
 	height: 151px;
@@ -302,6 +323,7 @@
 	background: #C4C4C4;
 }
 #addWorkerName{
+	/*CSS For Name Box For Add Worker*/
 	position: absolute;
 	width: 597px;
 	height: 153px;
@@ -310,6 +332,7 @@
 	background: #FFFFFF;
 }
 #addWorkerID{
+	/*CSS For ID Box For Add Worker*/
 	position: absolute;
 	width: 597px;
 	height: 153px;
@@ -318,6 +341,7 @@
 	background: #FFFFFF;
 }
 #addEquipName{
+	/*CSS For Equipment Name Box For Add Equipment*/
 	position: absolute;
 	width: 597px;
 	height: 153px;
@@ -326,6 +350,7 @@
 	background: #FFFFFF;
 }
 #addEquipID{
+	/*CSS For Equipment ID Box*/
 	position: absolute;
 	width: 597px;
 	height: 153px;
@@ -334,6 +359,7 @@
 	background: #FFFFFF;
 }
 header{
+	/*CSS For Header*/
 	position: absolute;
 	width: 1920px;
 	height: 118px;
@@ -342,6 +368,8 @@ header{
 	background: #C4C4C4;
 }
 #workerIDtext{
+	/*CSS For ID Input for Worker To
+	Insert their ID*/
 	position: absolute;
 	width: 539px;
 	height: 101px;
@@ -371,6 +399,7 @@ header{
 	color: #582C83;
 }
 #labelDamagedText{
+	/*CSS For Label Damaged Text In Worker*/
 	position: absolute;
 	width: 676px;
 	height: 144px;
@@ -387,6 +416,7 @@ header{
 	color: #582C83;
 }
 #listSanText{
+	/*CSS For Sanitize Text In Worker*/
 	position: absolute;
 	width: 954px;
 	height: 87px;
