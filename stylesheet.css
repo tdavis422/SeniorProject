@@ -430,3 +430,12 @@ header{
 	text-align: center;
 	color: #C4C4C4;
 }
+img
+{
+	/*CSS For Logo On All Pages*/
+	position: absolute;
+	width: 220px;
+	height: 101px;
+	left: 15px;
+	top: 10px;
+}
