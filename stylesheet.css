@@ -358,15 +358,6 @@
 	top: 724px;
 	background: #FFFFFF;
 }
-header{
-	/*CSS For Header*/
-	position: absolute;
-	width: 1920px;
-	height: 118px;
-	left: 0px;
-	top: 0px;
-	background: #C4C4C4;
-}
 #workerIDtext{
 	/*CSS For ID Input for Worker To
 	Insert their ID*/
@@ -438,4 +429,13 @@ img
 	height: 101px;
 	left: 15px;
 	top: 10px;
+}
+header{
+	/*CSS For Header*/
+	position: absolute;
+	width: 1920px;
+	height: 118px;
+	left: 0px;
+	top: 0px;
+	background: #C4C4C4;
 }
