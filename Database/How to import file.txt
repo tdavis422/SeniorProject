@@ -1,0 +1,7 @@
+1. Open SQLite studio
+2. Click on database
+3. Click "Add a database"
+4. Make sure the database type is "SQLite 3", and click the folder under "File".
+5. Select "GameroomTracker.db"
+6. Click OK
+7. Right click on the database on the left pane and selct "Connect to the database"
