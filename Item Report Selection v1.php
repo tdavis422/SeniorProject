@@ -7,39 +7,27 @@
 
 <!--This is the Ping Pong button.-->
 <h2>Ping Pong</h2>
-<form action="Ping.Pong" method="post">
-<input type="text" ping pong="ping pong"><br>
-</form>
+<button type="button">Ping Pong</button>
 
 <!--This is the Pool button.-->
 <h2>Pool</h2>
-<form action="Pool" method="post">
-<input type="text" pool="pool"><br> 
-</form>
+<button type="button">Pool</button>
 
 <!--This is the Foosball button.-->
 <h2>Foosball</h2>
-<form action="Foosball" method="post">
-<input type="text" foosball="foosball"><br> 
-</form>
+<button type="button">Foosball</button>
 
 <!--This is the Xbox button.-->
 <h2>Xbox</h2>
-<form action="Xbox" method="post">
-<input type="text" xbox="xbox"><br> 
-</form>
+<button type="button">Xbox</button>
 
 <!--This is the PC button.-->
 <h2>PC</h2>
-<form action="PC" method="post">
-<input type="text" pc="pc"><br> 
-</form>
+<button type="button">PC</button>
 
 <!--This is the With Friends button.-->
 <h2>With Friends</h2>
-<form action="With.Friends" method="post">
-<input type="text" with friends="with friends"><br> 
-</form>
+<button type="button">With Friends</button>
 
 </body>
 </html>
