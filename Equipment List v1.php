@@ -5,7 +5,11 @@
 <!--This is just text.-->
 <h2>List of Equipment</h2>
 
-<!--I'm not sure on how to get this to show the list. It could go in a table or list.-->
+<ul style="list-style-type:none;">
+  <li>Equipment</li>  # This would have the name of the piece of equipment.
+  <li>Equipment</li>  # This would have the name of the piece of equipment.
+  <li>Equipment</li>  # This would have the name of the piece of equipment.
+</ul>
 
 </body>
 </html>
