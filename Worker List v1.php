@@ -5,7 +5,11 @@
 <!--This is just text.-->
 <h2>List of Workers Currently In System</h2>
 
-<!--I'm not sure on how to get this to show the list. It could go in a table or list.-->
+<ul style="list-style-type:none;">
+  <li>Worker</li>  # This would have the name of the worker.
+  <li>Worker</li>  # This would have the name of the worker.
+  <li>Worker</li>  # This would have the name of the worker.
+</ul>
 
 </body>
 </html>
