@@ -7,15 +7,11 @@
 
 <!--This is the button for sanitize.-->
 <h2>Sanitize</h2>
-<form action="Sanitize" method="post">
-<input type="text" sanitize="sanitize"><br> 
-</form>
+<button type="button">Sanitize</button>
 
 <!--This is the button for damaged.-->
 <h2>Damaged</h2>
-<form action="Damaged" method="post">
-<input type="text" damaged="damaged"><br> 
-</form>
+<button type="button">Damaged</button>
 
 </body>
 </html>
