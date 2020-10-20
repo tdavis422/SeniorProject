@@ -438,3 +438,11 @@ header{
 	top: 0px;
 	background: #C4C4C4;
 }
+body{
+	/*CSS For Body*/
+	width: 1920px;
+	height: 962px;
+	left: 0px;
+	top: 118px;
+	background: #582C83;
+}
