@@ -7,15 +7,11 @@
 
 <!--This is the button for Yes.-->
 <h2>Yes</h2>
-<form action="Yes" method="post">
-<input type="text" yes="yes"><br> 
-</form>
+<button type="button">Yes</button>
 
 <!--This is the button for No.-->
 <h2>No</h2>
-<form action="No" method="post">
-<input type="text" no="no"><br> 
-</form>
+<button type="button">No</button>
 
 </body>
 </html>
