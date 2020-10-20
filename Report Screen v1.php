@@ -7,15 +7,11 @@
 
 <!--This is the button for All Items.-->
 <h2>All Items</h2>
-<form action="All.Items" method="post">
-<input type="text" all="all"><br> 
-</form>
+<button type="button">All Items</button>
 
 <!--This is the button for Specific Item.-->
 <h2>Specific Item</h2>
-<form action="Specific.Item" method="post">
-<input type="text" specific="specific"><br> 
-</form>
+<button type="button">Specific Item</button>
 
 </body>
 </html>
