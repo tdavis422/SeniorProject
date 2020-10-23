@@ -25,7 +25,7 @@
 	top: 779px;
 	background: #C4C4C4;
 }
-#idNumber{
+.idNumber{
 	/*CSS For Area to input ID for Student/Worker*/
 	position: absolute;
 	width: 539px;
@@ -421,12 +421,177 @@
 	text-align: center;
 	color: #C4C4C4;
 }
-#studentID{
+#workerLabelDamaged{
+	/*CSS For Scanning or entering label of damaged item*/
+	position: absolute;
+	width: 1138px;
+	height: 118px;
+	left: 391px;
+	top: 411px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	line-height: 82px;
+	color: #C4C4C4;
+}
+#sanDamagedCheckpoint{
+	/*Text asking worker if item has been checked and cleaned*/
+	position: absolute;
+	width: 1591px;
+	height: 121px;
+	left: 165px;
+	top: 379px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	text-align: center;
+	color: #C4C4C4;
+}
+#itemReadyText{
+	/*Let's worker know Item has been labeled for reuse*/
+	position: absolute;
+	width: 1750px;
+	height: 87px;
+	left: 85px;
+	top: 496px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	text-align: center;
+	color: #C4C4C4;
+}
+#itemLabelDamaged{
+	/*Let's worker know item has been labeled as damaged*/
+	position: absolute;
+	width: 1132px;
+	height: 97px;
+	left: 394px;
+	top: 491px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	line-height: 82px;
+	color: #C4C4C4;
+}
+.studentID{
+	/*CSS on StudentID Entry Screen to indicate to enter ID Number or Scan Barcode*/
 	position: absolute;
 	width: 689px;
 	height: 101px;
 	left: 615px;
 	top: 378px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	text-align: center;
+	color: #C4C4C4;
+}
+#selectController{
+	/*Let's student choose which console they would like to use*/
+	position: absolute;
+	width: 711px;
+	height: 199px;
+	left: 604px;
+	top: 480px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 90px;
+	line-height: 105px;
+	text-align: center;
+	color: #C4C4C4;
+}
+#seeWorkerText{
+	/*Tells student to talk to worker for controller to that console*/
+	position: absolute;
+	width: 936px;
+	height: 194px;
+	left: 492px;
+	top: 336px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 90px;
+	line-height: 105px;
+	text-align: center;
+	color: #C4C4C4;
+}
+#controllerCheckOutTime{
+	/*Tells student what time controller was checked out*/
+	position: absolute;
+	width: 915px;
+	height: 197px;
+	left: 492px;
+	top: 573px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 90px;
+	line-height: 105px;
+	text-align: center;
+	color: #C4C4C4;
+}
+#otherEquipmentCheckoutTime{
+	/*Tells student what time equipment was checked out*/
+	position: absolute;
+	width: 715px;
+	height: 117px;
+	left: 652px;
+	top: 478px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	text-align: center;
+	color: #C4C4C4;
+}
+#studentEquipmentSanDamaged{
+	/*Asks if equipment needs to be sanitized or was damaged during use*/
+	position: absolute;
+	width: 1013px;
+	height: 160px;
+	left: 404px;
+	top: 247px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	text-align: center;
+	color: #C4C4C4;
+}
+#studentSanDamagedText{
+	/*For text inside sanitize/damaged buttons*/
+	position: absolute;
+	width: 372px;
+	height: 89px;
+	left: 218px;
+	top: 541px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	text-align: center;
+	color: #582C83;
+}
+
+#studentEquipmentCheckin{
+	/*Tells student equipment was checked in successfully*/
+	position: absolute;
+	width: 715px;
+	height: 117px;
+	left: 652px;
+	top: 478px;
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: normal;
@@ -456,17 +621,21 @@ body{
 	/*CSS For Body*/
 	width: 1920px;
 	height: 962px;
-	left: 0px;
 	top: 118px;
 	background: #582C83;
 }
 a{
+	/*For all links to other parts of the system*/
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 64px;
-	text-align: center;
-	line-height: 75px;
 	color: #582c83;
 	text-decoration: none;
+}
+div{
+	/*For all divs in each page of the system to better align to Mockups*/
+	text-align: center;
+	display: block;
+	line-height: 75px;
 }
