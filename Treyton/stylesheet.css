@@ -406,7 +406,7 @@
 	text-align: center;
 	color: #582C83;
 }
-#listSanText{
+.listSanText{
 	/*CSS For Sanitize Text In Worker*/
 	position: absolute;
 	width: 954px;
@@ -600,6 +600,199 @@
 	text-align: center;
 	color: #C4C4C4;
 }
+#createReportText{
+	/*Asks whether it is a full report or specific items*/
+	position: absolute;
+	width: 1855px;
+	height: 122px;
+	left: 32px;
+	top: 191px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 61px;
+	line-height: 71px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+.printItemReport{
+	/*Says report has been printed*/
+	position: absolute;
+	width: 861px;
+	height: 236px;
+	left: 567px;
+	top: 441px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 61px;
+	line-height: 71px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+#specificReportText{
+	/*Asks what items to create a report on*/
+	position: absolute;
+	width: 1514px;
+	height: 107px;
+	left: 203px;
+	top: 172px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 86px;
+	line-height: 101px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+#replaceItemText{
+	/*Confirmation that item is being replaced*/
+	position: absolute;
+	width: 1788px;
+	height: 162px;
+	left: 66px;
+	top: 274px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 86px;
+	line-height: 101px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+#replaceConfirmationText{
+	/*Text to give confirmation that item has been replaced*/
+	position: absolute;
+	width: 1040px;
+	height: 237px;
+	left: 440px;
+	top: 421px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 86px;
+	line-height: 101px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+
+#addWorkerEquipmentText{
+	/*Asks for workers name or equipment name*/
+	position: absolute;
+	width: 844px;
+	height: 86px;
+	left: 538px;
+	top: 218px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+
+#addWorkerEquipmentIDText{
+	/*Asks for workers ID or equipmentID*/
+	position: absolute;
+	width: 844px;
+	height: 86px;
+	left: 538px;
+	top: 629px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+
+#addWorkerConfirmationText{
+	/*Confirmation to add worker into system*/
+	position: absolute;
+	width: 1360px;
+	height: 144px;
+	left: 284px;
+	top: 274px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+
+.addRemoveWorkerEquipmentConfirmation{
+	/*Gives confirmation that worker was added successfully*/
+	position: absolute;
+	width: 1040px;
+	height: 237px;
+	left: 440px;
+	top: 421px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 86px;
+	line-height: 101px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+
+.removeYes{
+	position: absolute;
+	width: 272px;
+	height: 93px;
+	left: 343px;
+	top: 574px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 64px;
+	line-height: 75px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #FF0000;
+}
+
+#clearDatabaseConfirmation{
+	/*Confirms that database is to be cleared for that semester*/
+	position: absolute;
+	width: 1788px;
+	height: 162px;
+	left: 66px;
+	top: 200px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 86px;
+	line-height: 101px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #C4C4C4;
+}
+
 img{
 	/*CSS For Logo On All Pages*/
 	position: absolute;
