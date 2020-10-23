@@ -759,6 +759,7 @@
 }
 
 .removeYes{
+	/*Yes button for when removing items or equipment*/
 	position: absolute;
 	width: 272px;
 	height: 93px;
