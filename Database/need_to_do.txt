@@ -1,15 +1,7 @@
-1. Discuss what needs to happen when inserting a new row into the check-ins table.
-
-	a. The system will check what what equipment are available to use and 
-	   choose one to put in the spot that has "sanitized" in the condition
-	   field.  Thus making a trigger select it in the database, making it
-	   turn from "sanitized" to "inUse".
-
-	b. The database will choice one of the available(sanitized) equipment 
-	   and by use of triggers make the equipment change from "sanitized" to
-	   "inUse"
-		
-		I. I currently do not know how I would have the database do this.
+1. The system will check what what equipment are available to use and 
+   choose one to put in the spot that has "sanitized" in the condition
+   field.  Thus making a trigger select it in the database, making it
+   turn from "sanitized" to "inUse".
 
 2. Make a trigger that when the equipment has been checked back in and the "timeIn"
    field is not equal to NULL, then change the condition of the equipment to 
