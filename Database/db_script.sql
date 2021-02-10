@@ -37,7 +37,7 @@ CREATE TABLE workers (workerID PRIMARY KEY ASC NOT NULL,
 
 -- Trigger: statusChangeNeedsSanitized
 CREATE TRIGGER statusChangeNeedsSanitized AFTER UPDATE OF timeIn ON checkouts FOR EACH ROW BEGIN SELECT * FROM equipment;
-UPDATE condition SET condition = 'needsSanitized' WHERE eqipmentID = equipmentID; END;
+UPDATE condition SET condition = 'needsSanitized' WHERE checkouts.equipmentID = equipment.equipmentID; END;
 
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
