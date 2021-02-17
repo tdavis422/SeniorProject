@@ -6,7 +6,7 @@ SET time_zone = "-06:00";
 
 -- Table: checkouts
 CREATE TABLE checkouts (
-	checkoutsID INT PRIMARY KEY AUTO_INCREMENT NOT NULL, 
+	checkoutsID INT AUTO_INCREMENT NOT NULL, 
 	equipmentID INT NOT NULL, 
 	studentID INT NOT NULL, 
 	workerID INT NOT NULL, 
@@ -22,7 +22,7 @@ CREATE TABLE checkouts (
 CREATE TABLE equipment (
 	equipmentID INT NOT NULL, 
 	equipmentType INT NOT NULL, 
-	condition VARCHAR` NOT NULL, 
+	condition VARCHAR NOT NULL, 
 	lastCleanedBy INT NOT NULL, 
 	dateAdded DATE NOT NULL, 
 	dateRemoved DATE NOT NULL, 
@@ -42,7 +42,7 @@ CREATE TABLE equipmentTypes (
 
 -- Table: workers
 CREATE TABLE workers (
-	workerID NOT NULL, 
+	workerID INT NOT NULL, 
 	firstName VARCHAR (255) NOT NULL, 
 	lastName VARCHAR (255) NOT NULL, 
 	type VARCHAR (255) NOT NULL, 
