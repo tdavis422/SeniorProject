@@ -44,7 +44,7 @@ if(isset($_SESSION['username'])){
                 <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="posts_dropdown" class="collapse">
                     <li>
-                        <a href="./posts.php">View All Posts</a>
+                        <a href="posts.php">View All Posts</a>
                     </li>
                     <li>
                         <a href="posts.php?source=add_post">Add Posts</a>
@@ -55,10 +55,10 @@ if(isset($_SESSION['username'])){
                 <a href="javascript:;" data-toggle="collapse" data-target="#reports_dropdown"><i class="fa fa-fw fa-file"></i> Reports <i class="fa fa-fw fa-caret-down"></i></a>
 				<ul id="reports_dropdown" class="collapse">
 					<li>
-						<a href=""> Create Report(All) </a>
+						<a href="allReport.php"> Create Report(All) </a>
 					</li>
 					<li>
-						<a href=""> Create Report(Specific) </a>
+						<a href="specReport.php"> Create Report(Specific) </a>
 					</li>
 				</ul>
             </li>
@@ -66,13 +66,13 @@ if(isset($_SESSION['username'])){
 				<a href="javascript:;" data-toggle="collapse" data-target="#equipment_dropdown"><i class="fa fa-fw fa-wrench"></i> Equipment <i class="fa fa-fw fa-caret-down"></i></a>
 				<ul id="equipment_dropdown" class="collapse">
 					<li>
-						<a href=""> View All Equipment </a>
+						<a href="view_all_equipment.php"> View All Equipment </a>
 					</li>
 					<li>
-						<a href=""> Add Equipment </a>
+						<a href="add_equipment.php"> Add Equipment </a>
 					</li>
 					<li>
-						<a href=""> Add Equipment Type </a>
+						<a href="add_equipment_type.php"> Add Equipment Type </a>
 					</li>
 				</ul>
 			</li>
@@ -94,7 +94,7 @@ if(isset($_SESSION['username'])){
                 <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Profile </a>
             </li>
 			<li>
-				<a href=""><i class="fa fa-fw fa-wrench"></i> Clear Database </a>
+				<a href="clear_database.php"><i class="fa fa-fw fa-wrench"></i> Clear Database </a>
 			</li>
         </ul>
     </div>

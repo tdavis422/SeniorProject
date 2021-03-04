@@ -37,7 +37,17 @@ if(isset($_POST['login'])){
     $_SESSION['user_role'] = $db_user_role;
 
     header("Location: ../admin");
-  }else{
+  }
+  
+  else if($username === $db_user_name && $password === $db_user_password && $user_role === 'worker'){
+    $_SESSION['username'] = $db_user_name;
+    $_SESSION['firstname'] = $db_user_firstname;
+    $_SESSION['lastname'] = $db_user_lastname;
+    $_SESSION['user_role'] = $db_user_role;
+
+    header("Location: ../worker");
+  }
+  else{
     header("Location: ../index.php");
   }
 }

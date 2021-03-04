@@ -42,3 +42,34 @@
 [Thu Mar 04 15:10:59.464038 2021] [php:notice] [pid 26536:tid 1808] [client ::1:54738]    password:$2y$10$iusesomecrazystrings1uq9lIY3QxyJrVvDLBdpJXUy8yFMOFGTa, referer: http://localhost/cms-master/index.php
 [Thu Mar 04 15:11:39.980078 2021] [php:notice] [pid 26536:tid 1796] [client ::1:54761] db_password:$2y$10$iusesomecrazystrings1uvXMOXlmEX.A1CFtrOOG/r92dZgLL/rS, referer: http://localhost/cms-master/index.php
 [Thu Mar 04 15:11:40.032075 2021] [php:notice] [pid 26536:tid 1796] [client ::1:54761]    password:$2y$10$iusesomecrazystrings1uvXMOXlmEX.A1CFtrOOG/r92dZgLL/rS, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:18:26.152750 2021] [ssl:warn] [pid 15852:tid 148] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Mar 04 15:18:26.191249 2021] [core:warn] [pid 15852:tid 148] AH00098: pid file C:/Users/tdavi/Documents/GitHub/SeniorProject/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Mar 04 15:18:26.195249 2021] [ssl:warn] [pid 15852:tid 148] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Mar 04 15:18:26.212749 2021] [mpm_winnt:notice] [pid 15852:tid 148] AH00455: Apache/2.4.46 (Win64) OpenSSL/1.1.1h PHP/8.0.2 configured -- resuming normal operations
+[Thu Mar 04 15:18:26.212749 2021] [mpm_winnt:notice] [pid 15852:tid 148] AH00456: Apache Lounge VS16 Server built: Oct  2 2020 11:45:39
+[Thu Mar 04 15:18:26.212749 2021] [core:notice] [pid 15852:tid 148] AH00094: Command line: 'c:\\users\\tdavi\\documents\\github\\seniorproject\\xampp\\apache\\bin\\httpd.exe -d C:/Users/tdavi/Documents/GitHub/SeniorProject/xampp/apache'
+[Thu Mar 04 15:18:26.214749 2021] [mpm_winnt:notice] [pid 15852:tid 148] AH00418: Parent: Created child process 6656
+[Thu Mar 04 15:18:26.550250 2021] [ssl:warn] [pid 6656:tid 616] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Mar 04 15:18:26.589250 2021] [ssl:warn] [pid 6656:tid 616] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Thu Mar 04 15:18:26.607750 2021] [mpm_winnt:notice] [pid 6656:tid 616] AH00354: Child: Starting 150 worker threads.
+[Thu Mar 04 15:24:15.975192 2021] [php:warn] [pid 6656:tid 1824] [client ::1:55124] PHP Warning:  Undefined variable $message in C:\\Users\\tdavi\\Documents\\GitHub\\SeniorProject\\xampp\\htdocs\\cms-master\\registration.php on line 51, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:25:26.089567 2021] [php:notice] [pid 6656:tid 1832] [client ::1:55167] db_password:$2y$10$iusesomecrazystrings1uq9lIY3QxyJrVvDLBdpJXUy8yFMOFGTa, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:25:26.143566 2021] [php:notice] [pid 6656:tid 1832] [client ::1:55167]    password:$2y$10$iusesomecrazystrings1uq9lIY3QxyJrVvDLBdpJXUy8yFMOFGTa, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:27:56.409705 2021] [php:notice] [pid 6656:tid 1824] [client ::1:55257] db_password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:27:56.461203 2021] [php:notice] [pid 6656:tid 1824] [client ::1:55257]    password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:28:30.500899 2021] [php:notice] [pid 6656:tid 1832] [client ::1:55298] db_password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:28:30.557901 2021] [php:notice] [pid 6656:tid 1832] [client ::1:55298]    password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:37:32.204525 2021] [php:notice] [pid 6656:tid 1832] [client ::1:55688] db_password:$2y$10$iusesomecrazystrings1uq9lIY3QxyJrVvDLBdpJXUy8yFMOFGTa, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:37:32.256020 2021] [php:notice] [pid 6656:tid 1832] [client ::1:55688]    password:$2y$10$iusesomecrazystrings1uq9lIY3QxyJrVvDLBdpJXUy8yFMOFGTa, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:39:51.411157 2021] [php:notice] [pid 6656:tid 1832] [client ::1:55808] db_password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:39:51.465657 2021] [php:notice] [pid 6656:tid 1832] [client ::1:55808]    password:$2y$10$iusesomecrazystrings1uq9lIY3QxyJrVvDLBdpJXUy8yFMOFGTa, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:39:58.318501 2021] [php:notice] [pid 6656:tid 1824] [client ::1:55817] db_password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:39:58.371501 2021] [php:notice] [pid 6656:tid 1824] [client ::1:55817]    password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 15:53:18.086108 2021] [php:error] [pid 6656:tid 1832] [client ::1:56196] script 'C:/Users/tdavi/Documents/GitHub/SeniorProject/xampp/htdocs/cms-master/admin/allReport.php' not found or unable to stat, referer: http://localhost/cms-master/admin/posts.php
+[Thu Mar 04 15:53:21.116993 2021] [php:error] [pid 6656:tid 1832] [client ::1:56196] script 'C:/Users/tdavi/Documents/GitHub/SeniorProject/xampp/htdocs/cms-master/admin/specReport.php' not found or unable to stat, referer: http://localhost/cms-master/admin/posts.php
+[Thu Mar 04 16:02:31.362400 2021] [php:notice] [pid 6656:tid 1832] [client ::1:56608] db_password:$2y$10$iusesomecrazystrings1uq9lIY3QxyJrVvDLBdpJXUy8yFMOFGTa, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 16:02:31.416897 2021] [php:notice] [pid 6656:tid 1832] [client ::1:56608]    password:$2y$10$iusesomecrazystrings1uq9lIY3QxyJrVvDLBdpJXUy8yFMOFGTa, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 16:04:27.164694 2021] [php:notice] [pid 6656:tid 1824] [client ::1:56669] db_password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 16:04:27.219196 2021] [php:notice] [pid 6656:tid 1824] [client ::1:56669]    password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 16:04:49.228093 2021] [php:notice] [pid 6656:tid 1824] [client ::1:56685] db_password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
+[Thu Mar 04 16:04:49.284593 2021] [php:notice] [pid 6656:tid 1824] [client ::1:56685]    password:$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e, referer: http://localhost/cms-master/index.php
