@@ -30,7 +30,7 @@ while($row = mysqli_fetch_assoc($select_users)){
   <td><?= $user_email ?></td>
   <td><?= $user_role ?></td>
   <td><a href='users.php?change_to_admin=<?= $user_id ?>'>Admin</a></td>
-  <td><a href='users.php?change_to_subscriber=<?= $user_id ?>'>Subscriber</a></td>
+  <td><a href='users.php?change_to_worker=<?= $user_id ?>'>Worker</a></td>
   <td><a href='users.php?source=edit_user&edit_user=<?= $user_id ?>'>Edit</a></td>
   <td><a href='users.php?delete=<?= $user_id ?>'>Delete</a></td>
 </tr>
@@ -48,9 +48,9 @@ if(isset($_GET['change_to_admin'])){
   header("Location: users.php");
 }
 
-if(isset($_GET['change_to_subscriber'])){
-  $the_user_id = $_GET['change_to_subscriber'];
-  $query = "UPDATE users SET user_role = 'subscriber' WHERE user_id = {$the_user_id}";
+if(isset($_GET['change_to_worker'])){
+  $the_user_id = $_GET['change_to_worker'];
+  $query = "UPDATE users SET user_role = 'worker' WHERE user_id = {$the_user_id}";
   $change_role_query = mysqli_query($connection, $query);
   header("Location: users.php");
 }

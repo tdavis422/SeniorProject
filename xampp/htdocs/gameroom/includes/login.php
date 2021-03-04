@@ -5,7 +5,7 @@ session_start();
 
 <?php
 if(isset($_POST['login'])){
-  $username = $_POST['worker_userName'];
+  $username = $_POST['username'];
   $password = $_POST['user_password'];
   $username = mysqli_real_escape_string($connection, $username);
   $password = mysqli_real_escape_string($connection, $password);
@@ -17,11 +17,11 @@ if(isset($_POST['login'])){
   }
 
   while($row = mysqli_fetch_array($select_user_query)){
-    $db_user_id = $row['worker_ID'];
-    $db_user_name = $row['worker_userName'];
+    $db_user_id = $row['user_id'];
+    $db_user_name = $row['username'];
     $db_user_password = $row['user_password'];
-    $db_user_firstname = $row['worker_firstName'];
-    $db_user_lastname = $row['worker_lastName'];
+    $db_user_firstname = $row['user_firstname'];
+    $db_user_lastname = $row['user_lastname'];
     $db_user_role = $row['user_role'];
   }
   error_log("db_password:".$db_user_password, 0);
@@ -30,14 +30,25 @@ if(isset($_POST['login'])){
 
   error_log("   password:".$password, 0);
 
-  if($username === $db_user_name && $password === $db_user_password){
-    $_SESSION['worker_userName'] = $db_user_name;
-    $_SESSION['worker_firstName'] = $db_user_firstname;
-    $_SESSION['worker_lastName'] = $db_user_lastname;
+  if($username === $db_user_name && $password === $db_user_password && $user_role === 'admin'){
+    $_SESSION['username'] = $db_user_name;
+    $_SESSION['firstname'] = $db_user_firstname;
+    $_SESSION['lastname'] = $db_user_lastname;
     $_SESSION['user_role'] = $db_user_role;
 
     header("Location: ../admin");
-  }else{
+  }
+  
+  else if($username === $db_user_name && $password === $db_user_password && $user_role === 'worker'){
+    $_SESSION['username'] = $db_user_name;
+    $_SESSION['firstname'] = $db_user_firstname;
+    $_SESSION['lastname'] = $db_user_lastname;
+    $_SESSION['user_role'] = $db_user_role;
+
+    header("Location: ../worker");
+  }
+  
+  else{
     header("Location: ../index.php");
   }
 }

@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 25, 2021 at 09:42 PM
+-- Host: 127.0.0.1
+-- Generation Time: Mar 02, 2021 at 04:04 PM
 -- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- PHP Version: 8.0.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,10 +36,27 @@ CREATE TABLE `categories` (
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` VALUES(1, 'javascript');
-INSERT INTO `categories` VALUES(5, 'PHP');
-INSERT INTO `categories` VALUES(6, 'Java');
-INSERT INTO `categories` VALUES(7, 'C');
+INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
+(1, 'javascript'),
+(5, 'PHP'),
+(6, 'Java'),
+(7, 'C');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `checkouts`
+--
+
+CREATE TABLE `checkouts` (
+  `checkoutsID` int(11) NOT NULL,
+  `equipmentID` int(11) NOT NULL,
+  `studentID` int(11) NOT NULL,
+  `workerID` int(11) NOT NULL,
+  `timeOut` datetime NOT NULL,
+  `timeIn` datetime DEFAULT NULL,
+  `notes` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -61,15 +78,43 @@ CREATE TABLE `comments` (
 -- Dumping data for table `comments`
 --
 
-INSERT INTO `comments` VALUES(8, 1, 'blu', 'lubaochuan@gmail.com', 'test comment', 'unapproved', '2020-12-29');
-INSERT INTO `comments` VALUES(9, 2, 'dsaf', 'blu@sbuniv.edu', 'hello', 'unapproved', '2020-12-29');
-INSERT INTO `comments` VALUES(10, 1, '', '', '', 'unapproved', '2021-01-07');
-INSERT INTO `comments` VALUES(11, 1, 'dsaf', 'blu@sbuniv.edu', 'Hello', 'unapproved', '2021-01-07');
-INSERT INTO `comments` VALUES(12, 1, 'dsaf', 'blu@sbuniv.edu', 'Hello', 'unapproved', '2021-01-07');
-INSERT INTO `comments` VALUES(13, 1, 'b. Lu', 'lubaochuan@gmail.com', 'Hello world', 'unapproved', '2021-01-07');
-INSERT INTO `comments` VALUES(14, 2, 'b. Lu', 'lubaochuan@gmail.com', 'Good job.', 'approved', '2021-01-11');
-INSERT INTO `comments` VALUES(15, 2, 'blu', 'lubaochuan@gmail.com', 'Good job.', 'approved', '2021-01-11');
-INSERT INTO `comments` VALUES(16, 7, 'blu', 'jianpuwang07@gmail.com', 'asdfa', 'approved', '2021-01-13');
+INSERT INTO `comments` (`comment_id`, `comment_post_id`, `comment_author`, `comment_email`, `comment_content`, `comment_status`, `comment_date`) VALUES
+(8, 1, 'blu', 'lubaochuan@gmail.com', 'test comment', 'unapproved', '2020-12-29'),
+(9, 2, 'dsaf', 'blu@sbuniv.edu', 'hello', 'unapproved', '2020-12-29'),
+(10, 1, '', '', '', 'unapproved', '2021-01-07'),
+(11, 1, 'dsaf', 'blu@sbuniv.edu', 'Hello', 'unapproved', '2021-01-07'),
+(12, 1, 'dsaf', 'blu@sbuniv.edu', 'Hello', 'unapproved', '2021-01-07'),
+(13, 1, 'b. Lu', 'lubaochuan@gmail.com', 'Hello world', 'unapproved', '2021-01-07'),
+(14, 2, 'b. Lu', 'lubaochuan@gmail.com', 'Good job.', 'approved', '2021-01-11'),
+(15, 2, 'blu', 'lubaochuan@gmail.com', 'Good job.', 'approved', '2021-01-11'),
+(16, 7, 'blu', 'jianpuwang07@gmail.com', 'asdfa', 'approved', '2021-01-13');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `equipment`
+--
+
+CREATE TABLE `equipment` (
+  `equipmentID` int(11) NOT NULL,
+  `equipmentType` int(11) NOT NULL,
+  `equipmentStatus` char(255) NOT NULL,
+  `lastCleanedBy` int(11) NOT NULL,
+  `dateAdded` date NOT NULL,
+  `dateRemoved` date NOT NULL,
+  `notes` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `equipmenttypes`
+--
+
+CREATE TABLE `equipmenttypes` (
+  `equipmentTypeID` int(11) NOT NULL,
+  `equipmentType` char(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -94,18 +139,19 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` VALUES(2, 1, 'PHP', 'blu', '2020-12-29', '350x150.png', 'hello world', 'java, js', 2, 'published');
-INSERT INTO `posts` VALUES(7, 5, 'RE: Hello', 'Blu', '2021-01-12', '350x65.png', '<ul><li>eat</li><li>drink</li><li>be merry</li></ul>', 'java, js', 1, 'published');
-INSERT INTO `posts` VALUES(10, 1, 'Syllabus', 'Blu', '2021-01-14', '', '<p>Teset</p>', 'java, js', 0, 'published');
-INSERT INTO `posts` VALUES(11, 1, 'PHP', 'blu', '2021-01-14', '350x150.png', 'hello world', 'java, js', 2, 'published');
-INSERT INTO `posts` VALUES(12, 5, 'RE: Hello', 'Blu', '2021-01-14', '350x65.png', '<ul><li>eat</li><li>drink</li><li>be merry</li></ul>', 'java, js', 1, 'published');
-INSERT INTO `posts` VALUES(13, 1, 'Syllabus', 'Blu', '2021-01-14', '', '<p>Teset</p>', 'java, js', 0, 'published');
-INSERT INTO `posts` VALUES(14, 1, 'Syllabus', 'Blu', '2021-01-15', '', '<p>Teset</p>', 'java, js', 0, 'published');
-INSERT INTO `posts` VALUES(15, 5, 'RE: Hello', 'Blu', '2021-01-15', '350x65.png', '<ul><li>eat</li><li>drink</li><li>be merry</li></ul>', 'java, js', 1, 'published');
-INSERT INTO `posts` VALUES(16, 1, 'PHP', 'blu', '2021-01-15', '350x150.png', 'hello world', 'java, js', 2, 'published');
-INSERT INTO `posts` VALUES(17, 1, 'Syllabus', 'Blu', '2021-01-15', '', '<p>Teset</p>', 'java, js', 0, 'published');
-INSERT INTO `posts` VALUES(18, 5, 'RE: Hello', 'Blu', '2021-01-15', '350x65.png', '<ul><li>eat</li><li>drink</li><li>be merry</li></ul>', 'java, js', 1, 'published');
-INSERT INTO `posts` VALUES(19, 1, 'PHP', 'blu', '2021-01-15', '350x150.png', 'hello world', 'java, js', 2, 'published');
+INSERT INTO `posts` (`post_id`, `post_category_id`, `post_title`, `post_author`, `post_date`, `post_image`, `post_content`, `post_tags`, `post_comment_count`, `post_status`) VALUES
+(2, 1, 'PHP', 'blu', '2020-12-29', '350x150.png', 'hello world', 'java, js', 2, 'published'),
+(7, 5, 'RE: Hello', 'Blu', '2021-01-12', '350x65.png', '<ul><li>eat</li><li>drink</li><li>be merry</li></ul>', 'java, js', 1, 'published'),
+(10, 1, 'Syllabus', 'Blu', '2021-01-14', '', '<p>Teset</p>', 'java, js', 0, 'published'),
+(11, 1, 'PHP', 'blu', '2021-01-14', '350x150.png', 'hello world', 'java, js', 2, 'published'),
+(12, 5, 'RE: Hello', 'Blu', '2021-01-14', '350x65.png', '<ul><li>eat</li><li>drink</li><li>be merry</li></ul>', 'java, js', 1, 'published'),
+(13, 1, 'Syllabus', 'Blu', '2021-01-14', '', '<p>Teset</p>', 'java, js', 0, 'published'),
+(14, 1, 'Syllabus', 'Blu', '2021-01-15', '', '<p>Teset</p>', 'java, js', 0, 'published'),
+(15, 5, 'RE: Hello', 'Blu', '2021-01-15', '350x65.png', '<ul><li>eat</li><li>drink</li><li>be merry</li></ul>', 'java, js', 1, 'published'),
+(16, 1, 'PHP', 'blu', '2021-01-15', '350x150.png', 'hello world', 'java, js', 2, 'published'),
+(17, 1, 'Syllabus', 'Blu', '2021-01-15', '', '<p>Teset</p>', 'java, js', 0, 'published'),
+(18, 5, 'RE: Hello', 'Blu', '2021-01-15', '350x65.png', '<ul><li>eat</li><li>drink</li><li>be merry</li></ul>', 'java, js', 1, 'published'),
+(19, 1, 'PHP', 'blu', '2021-01-15', '350x150.png', 'hello world', 'java, js', 2, 'published');
 
 -- --------------------------------------------------------
 
@@ -129,8 +175,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` VALUES(5, 'admin', '$2y$10$iusesomecrazystrings1uvXMOXlmEX.A1CFtrOOG/r92dZgLL/rS', 'B. ', 'Lu', 'lubaochuan@gmail.com', NULL, 'admin', '$2y$10$iusesomecrazystrings12$');
-INSERT INTO `users` VALUES(24, 'bbb', '$2y$10$iusesomecrazystrings1uvXMOXlmEX.A1CFtrOOG/r92dZgLL/rS', NULL, NULL, 'blu@sbuniv.edu', NULL, 'admin', '$2y$10$iusesomecrazystrings12$');
+INSERT INTO `users` (`user_id`, `username`, `user_password`, `user_firstname`, `user_lastname`, `user_email`, `user_image`, `user_role`, `randSalt`) VALUES
+(5, 'admin', '$2y$10$iusesomecrazystrings1uvXMOXlmEX.A1CFtrOOG/r92dZgLL/rS', 'B. ', 'Lu', 'lubaochuan@gmail.com', NULL, 'admin', '$2y$10$iusesomecrazystrings12$'),
+(24, 'bbb', '$2y$10$iusesomecrazystrings1uvXMOXlmEX.A1CFtrOOG/r92dZgLL/rS', NULL, NULL, 'blu@sbuniv.edu', NULL, 'admin', '$2y$10$iusesomecrazystrings12$'),
+(25, 'ryzenlevel', '$2y$10$iusesomecrazystrings1ulpaUESTP6FW2bJ.XRqoYBKz8qplb88e', 'Treyton', 'Davis', 'tdavis422@gmail.com', NULL, 'admin', '$2y$10$iusesomecrazystrings12$');
 
 --
 -- Indexes for dumped tables
@@ -143,10 +191,28 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `checkouts`
+--
+ALTER TABLE `checkouts`
+  ADD PRIMARY KEY (`checkoutsID`);
+
+--
 -- Indexes for table `comments`
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`comment_id`);
+
+--
+-- Indexes for table `equipment`
+--
+ALTER TABLE `equipment`
+  ADD PRIMARY KEY (`equipmentID`);
+
+--
+-- Indexes for table `equipmenttypes`
+--
+ALTER TABLE `equipmenttypes`
+  ADD PRIMARY KEY (`equipmentTypeID`);
 
 --
 -- Indexes for table `posts`
@@ -171,10 +237,22 @@ ALTER TABLE `categories`
   MODIFY `cat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
+-- AUTO_INCREMENT for table `checkouts`
+--
+ALTER TABLE `checkouts`
+  MODIFY `checkoutsID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
   MODIFY `comment_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `equipmenttypes`
+--
+ALTER TABLE `equipmenttypes`
+  MODIFY `equipmentTypeID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `posts`
@@ -186,7 +264,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `user_id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
