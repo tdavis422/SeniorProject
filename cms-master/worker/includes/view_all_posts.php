@@ -1,5 +1,5 @@
 <?php
-include "delete_modal.php";
+include "worker_modal.php";
 
 if(isset($_POST['checkBoxArray'])){
   foreach($_POST['checkBoxArray'] as $post_id){
@@ -67,15 +67,12 @@ if(isset($_POST['checkBoxArray'])){
       <th>Id</th>
       <th>Author</th>
       <th>Title</th>
-      <th>Category</th>
       <th>Status</th>
       <th>Image</th>
       <th>Tags</th>
       <th>Comments</th>
       <th>Date</th>
       <th>View Post</th>
-      <th>Edit</th>
-      <th>Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -99,15 +96,15 @@ while($row = mysqli_fetch_assoc($select_posts)){
   <td><?= $post_author ?></td>
   <td><?= $post_title ?></td>
 <?php
-$query = "SELECT * FROM categories WHERE cat_id = $post_category_id";
+/*$query = "SELECT * FROM categories WHERE cat_id = $post_category_id";
 $select_categories_id = mysqli_query($connection, $query);
 while($row = mysqli_fetch_assoc($select_categories_id)){
   $cat_id = $row['cat_id'];
-  $cat_title = $row['cat_title'];
+  $cat_title = $row['cat_title'];*/
  ?>
-  <td><?= $cat_title ?></td>
+  
 <?php
-}
+//}
  ?>
   <td><?= $post_status ?></td>
   <td><img class = 'img-responsive' src = '../images/<?= $post_image ?>'</img></td>
@@ -115,8 +112,6 @@ while($row = mysqli_fetch_assoc($select_categories_id)){
   <td><?= $post_comment_count ?></td>
   <td><?= $post_date ?></td>
   <td><a href='../post.php?p_id=<?= $post_id ?>'>View Post</a></td>
-  <td><a href='posts.php?source=edit_post&p_id=<?= $post_id ?>'>Edit</a></td>
-  <td><a href='javacript:void(0)' rel="<?= $post_id ?>" class="delete_link">Delete</a></td>
   </tr>
 <?php
 }

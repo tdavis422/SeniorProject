@@ -22,14 +22,11 @@ if(isset($_GET['source'])){
 }
 
 switch($source){
-  case 'add_user':
-    include "includes/add_user.php";
-    break;
-  case 'edit_user':
-    include "includes/edit_user.php";
-    break;
+  case 'sanitize':
+	include "includes/sanitize_equipment.php";
+	break;
   default:
-    include "includes/view_all_users.php";
+    include "includes/view_all_equipment.php";
     break;
 }
 ?>

@@ -1,9 +1,9 @@
-<?php include "includes/worker_header.php" ?>
+<?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 
 <div id="wrapper">
 
-<?php include "includes/worker_navigation.php" ?>
+<?php include "includes/admin_navigation.php" ?>
 
   <div id="page-wrapper">
     <div class="container-fluid">
@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header">
-            Welcome to Worker
+            Welcome to Admin
             <small><?=$_SESSION['username']?></small>
           </h1>
 <?php
@@ -22,14 +22,20 @@ if(isset($_GET['source'])){
 }
 
 switch($source){
-  case 'add_user':
-    include "includes/add_user.php";
+  case 'add':
+    include "includes/add_equipment.php";
     break;
-  case 'edit_user':
-    include "includes/edit_user.php";
+  case 'sanitize':
+	include "includes/sanitize_equipment.php";
+	break;
+  case 'edit':
+    include "includes/edit_equipment.php";
     break;
+  case 'remove':
+	include "includes/remove_equipment.php";
+	break;
   default:
-    include "includes/view_all_users.php";
+    include "includes/view_all_equipment.php";
     break;
 }
 ?>
@@ -40,4 +46,4 @@ switch($source){
         <!-- /#page-wrapper -->
 </div>
     <!-- /#wrapper -->
-<?php include "includes/worker_footer.php" ?>
+<?php include "includes/admin_footer.php" ?>

@@ -55,10 +55,10 @@ if(isset($_SESSION['username'])){
                 <a href="javascript:;" data-toggle="collapse" data-target="#reports_dropdown"><i class="fa fa-fw fa-file"></i> Reports <i class="fa fa-fw fa-caret-down"></i></a>
 				<ul id="reports_dropdown" class="collapse">
 					<li>
-						<a href="allReport.php"> Create Report(All) </a>
+						<a href="report.php?source=allReport"> Create Report(All) </a>
 					</li>
 					<li>
-						<a href="specReport.php"> Create Report(Specific) </a>
+						<a href="report.php?source=specReport"> Create Report(Specific) </a>
 					</li>
 				</ul>
             </li>
@@ -66,10 +66,10 @@ if(isset($_SESSION['username'])){
 				<a href="javascript:;" data-toggle="collapse" data-target="#equipment_dropdown"><i class="fa fa-fw fa-wrench"></i> Equipment <i class="fa fa-fw fa-caret-down"></i></a>
 				<ul id="equipment_dropdown" class="collapse">
 					<li>
-						<a href="view_all_equipment.php"> View All Equipment </a>
+						<a href="equipment.php"> View All Equipment </a>
 					</li>
 					<li>
-						<a href="add_equipment.php"> Add Equipment </a>
+						<a href="equipment.php?source=add"> Add Equipment </a>
 					</li>
 					<li>
 						<a href="add_equipment_type.php"> Add Equipment Type </a>

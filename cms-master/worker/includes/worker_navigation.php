@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">Gameroom Admin</a>
+        <a class="navbar-brand" href="index.php">Gameroom Worker</a>
     </div>
     <!-- Top Menu Items -->
     <ul class="nav navbar-right top-nav">
@@ -51,28 +51,12 @@ if(isset($_SESSION['username'])){
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#reports_dropdown"><i class="fa fa-fw fa-file"></i> Reports <i class="fa fa-fw fa-caret-down"></i></a>
-				<ul id="reports_dropdown" class="collapse">
-					<li>
-						<a href=""> Create Report(All) </a>
-					</li>
-					<li>
-						<a href=""> Create Report(Specific) </a>
-					</li>
-				</ul>
-            </li>
+            
 			<li>
 				<a href="javascript:;" data-toggle="collapse" data-target="#equipment_dropdown"><i class="fa fa-fw fa-wrench"></i> Equipment <i class="fa fa-fw fa-caret-down"></i></a>
 				<ul id="equipment_dropdown" class="collapse">
 					<li>
-						<a href=""> View All Equipment </a>
-					</li>
-					<li>
-						<a href=""> Add Equipment </a>
-					</li>
-					<li>
-						<a href=""> Add Equipment Type </a>
+						<a href="equipment.php"> View All Equipment </a>
 					</li>
 				</ul>
 			</li>
@@ -82,9 +66,6 @@ if(isset($_SESSION['username'])){
                     <li>
                         <a href="users.php">View All Users</a>
                     </li>
-                    <li>
-                        <a href="users.php?source=add_user">Add User</a>
-                    </li>
                 </ul>
             </li>
             <li class="">
@@ -93,9 +74,7 @@ if(isset($_SESSION['username'])){
             <li>
                 <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Profile </a>
             </li>
-			<li>
-				<a href=""><i class="fa fa-fw fa-wrench"></i> Clear Database </a>
-			</li>
+			
         </ul>
     </div>
     <!-- /.navbar-collapse -->

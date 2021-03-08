@@ -3,7 +3,7 @@ include "../includes/db.php";
 ob_start();
 session_start();
 
-if($_SESSION['user_role'] !== 'admin'){
+if($_SESSION['user_role'] !== 'worker'){
   header("Location: ../index.php");
 }else{
 
@@ -21,13 +21,13 @@ if($_SESSION['user_role'] !== 'admin'){
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin - Bootstrap Admin Template</title>
+    <title>SBU Gameroom</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/sb-admin.css" rel="stylesheet">
+    <link href="css/sb-worker.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->

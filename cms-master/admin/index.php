@@ -99,7 +99,7 @@ $user_count = mysqli_num_rows($select_all_users);
             </a>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6">
+        <!--<div class="col-lg-3 col-md-6">
           <div class="panel panel-red">
             <div class="panel-heading">
               <div class="row">
@@ -108,11 +108,11 @@ $user_count = mysqli_num_rows($select_all_users);
                 </div>
                 <div class="col-xs-9 text-right">
 <?php
-$query = "SELECT * FROM categories";
+/*$query = "SELECT * FROM categories";
 $select_all_categories = mysqli_query($connection, $query);
-$category_count = mysqli_num_rows($select_all_categories);
+$category_count = mysqli_num_rows($select_all_categories);*/
 ?>
-                  <div class='huge'><?=$category_count?></div>
+                  <div class='huge'>4</div>
                   <div>Categories</div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ $category_count = mysqli_num_rows($select_all_categories);
             </a>
           </div>
         </div>
-      </div>
+      </div>-->
       <!-- /.row -->
 <?php
 $query = "SELECT * FROM posts WHERE post_status = 'published'";
@@ -141,11 +141,11 @@ $query = "SELECT * FROM comments WHERE comment_status = 'unapproved'";
 $unapproved_comment = mysqli_query($connection, $query);
 $unapproved_comment_count = mysqli_num_rows($unapproved_comment);
 
-$query = "SELECT * FROM users WHERE user_role = 'subscriber'";
-$select_all_subscribers = mysqli_query($connection, $query);
-$subscriber_count = mysqli_num_rows($select_all_subscribers);
+$query = "SELECT * FROM users WHERE user_role = 'worker'";
+$select_all_workers = mysqli_query($connection, $query);
+$worker_count = mysqli_num_rows($select_all_workers);
  ?>
-      <script type="text/javascript">
+<!--      <script type="text/javascript">
          google.charts.load('current', {'packages':['bar']});
          google.charts.setOnLoadCallback(drawChart);
 
@@ -153,13 +153,13 @@ $subscriber_count = mysqli_num_rows($select_all_subscribers);
            var data = google.visualization.arrayToDataTable([
              ['Data', 'Count'],
 <?php
-$element_text = ['All Posts', 'Active Posts', 'Draft Posts', 'Comments', 'Pending Comments', 'Users', 'Subscribers', 'Categories'];
+/*$element_text = ['All Posts', 'Active Posts', 'Draft Posts', 'Comments', 'Pending Comments', 'Users', 'Subscribers', 'Categories'];
 $element_count = [$post_count, $published_post_count, $draft_post_count, $comment_count, $unapproved_comment_count, $user_count, $subscriber_count, $category_count];
 for($i=0; $i<8; $i++){
 ?>
   ['<?=$element_text[$i]?>', <?=$element_count[$i]?>],
 <?php
-}
+}*/
 ?>
            ]);
 
@@ -174,7 +174,7 @@ for($i=0; $i<8; $i++){
 
            chart.draw(data, google.charts.Bar.convertOptions(options));
          }
-       </script>
+       </script>-->
        <div id="columnchart_material" style="width: auto; height: 500px;"></div>
     </div>
     <!-- /.container-fluid -->

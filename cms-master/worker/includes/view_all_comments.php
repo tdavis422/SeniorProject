@@ -43,10 +43,6 @@ while($row = mysqli_fetch_assoc($select_post_id_query)){
  ?>
   <td><a href="../post.php?p_id=<?= $post_id ?>"><?= $post_title ?></a></td>
   <td><?= $comment_date ?></td>
-  <td><a href='comments.php?approve=<?= $comment_id ?>'>Approve</a></td>
-  <td><a href='comments.php?unapprove=<?= $comment_id ?>'>Unapprove</a></td>
-  <td><a href='comments.php?delete=<?= $comment_id ?>'>Delete</a></td>
-  </tr>
 <?php
 }
 ?>

@@ -1,5 +1,5 @@
 <?php
-include "includes/admin_header.php";
+include "includes/worker_header.php";
 include "functions.php";
 
 if(isset($_SESSION['username'])){
@@ -41,7 +41,7 @@ if(isset($_POST['edit_user'])){
 ?>
 <div id="wrapper">
 <?php
-include "includes/admin_navigation.php";
+include "includes/worker_navigation.php";
  ?>
   <div id="page-wrapper">
     <div class="container-fluid">
@@ -49,7 +49,7 @@ include "includes/admin_navigation.php";
       <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header">
-            Welcome to admin <small>Author</small>
+            Welcome to Worker <small><?=$_SESSION['username']?></small>
           </h1>
           <form class="" action="" method="post" enctype="multipart/form-data">
             <div class="form-group">
@@ -60,19 +60,6 @@ include "includes/admin_navigation.php";
             <div class="form-group">
               <label for="user_lastname">Lastname</label>
               <input type="text" class="form-control" value="<?=$user_lastname?>" name="user_lastname">
-            </div>
-
-            <div class="form-group">
-              <select class="" name="user_role" id="user_role">
-                <option value="<?=$user_role?>"><?=$user_role?></option>
-          <?php
-            if($user_role == 'admin'){
-              echo "<option value='subscriber'>subscriber</option>";
-            }else{
-              echo "<option value='admin'>admin</option>";
-            }
-          ?>
-              </select>
             </div>
 
             <div class="form-group">
@@ -102,4 +89,4 @@ include "includes/admin_navigation.php";
         <!-- /#page-wrapper -->
 </div>
     <!-- /#wrapper -->
-<?php include "includes/admin_footer.php" ?>
+<?php include "includes/worker_footer.php" ?>

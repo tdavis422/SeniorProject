@@ -1,0 +1,23 @@
+	<btn name="checkout"
+
+
+
+
+
+
+<?php
+	if ($_ISSET['checkout']) then
+		$query = INSERT INTO verify_student
+		$query := VALUES ($student_id, $equipment_id, $time_out)
+?>
+
+<?php
+	if ($_ISSET['verified']) then
+		$query = INSERT INTO checkouts
+		$query := VALUES ($equipment_id, $student_id, $worker_id, $time_out)
+	
+	else
+		SELECT * from student_id
+		FROM verify_student
+		DELETE WHERE $student_id = verify_student.student_id
+		

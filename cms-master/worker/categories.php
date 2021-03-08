@@ -1,9 +1,9 @@
-<?php include "includes/admin_header.php" ?>
+<?php include "includes/worker_header.php" ?>
 <?php include "functions.php" ?>
 
     <div id="wrapper">
 
-<?php include "includes/admin_navigation.php" ?>
+<?php include "includes/worker_navigation.php" ?>
 
         <div id="page-wrapper">
 
@@ -13,8 +13,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Welcome to admin
-                            <small>Author</small>
+                            Welcome
+                            <small>Worker</small>
                         </h1>
                         <div class="col-xs-6">
 
@@ -68,4 +68,4 @@ delete_categories();
 
     </div>
     <!-- /#wrapper -->
-<?php include "includes/admin_footer.php" ?>
+<?php include "includes/worker_footer.php" ?>
