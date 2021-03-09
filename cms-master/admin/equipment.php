@@ -22,7 +22,7 @@ if(isset($_GET['source'])){
 }
 
 switch($source){
-  case 'add':
+  case 'add_equipment':
     include "includes/add_equipment.php";
     break;
   case 'sanitize':
@@ -32,8 +32,11 @@ switch($source){
     include "includes/edit_equipment.php";
     break;
   case 'remove':
-	include "includes/remove_equipment.php";
-	break;
+	  include "includes/remove_equipment.php";
+	  break;
+  case 'add_type':
+    include "includes/add_equipment_type.php";
+    break;
   default:
     include "includes/view_all_equipment.php";
     break;

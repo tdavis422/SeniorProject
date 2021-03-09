@@ -69,10 +69,10 @@ if(isset($_SESSION['username'])){
 						<a href="equipment.php"> View All Equipment </a>
 					</li>
 					<li>
-						<a href="equipment.php?source=add"> Add Equipment </a>
+						<a href="equipment.php?source=add_equipment"> Add Equipment </a>
 					</li>
 					<li>
-						<a href="add_equipment_type.php"> Add Equipment Type </a>
+						<a href="equipment.php?source=add_type"> Add Equipment Type </a>
 					</li>
 				</ul>
 			</li>

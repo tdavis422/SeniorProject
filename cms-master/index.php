@@ -53,7 +53,9 @@ while($row = mysqli_fetch_assoc($select_all_posts_query)){
         </a>
         <hr>
         <p><?=$post_content?></p>
-        <a class="btn btn-primary" href="post.php?p_id=<?= $post_id ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+        <a class="btn btn-primary"
+          href="post.php?p_id=<?= $post_id ?>">Read More <span
+            class="glyphicon glyphicon-chevron-right"></span></a>
 
         <hr>
         <?php
