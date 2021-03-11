@@ -1,18 +1,16 @@
 <?php
 if(isset($_POST['create_equipment'])){
-  $equipment_id = $_POST['user_firstname'];
-  $equipment_type = $_POST['user_lastname'];
-  $equipmentStatus = ready;
-  $lastCleanedBy = null;
-  $dateAdded = date("M.D.Y");
-  $dateRemoved = null;
+  $equipment_id = $_POST['equipment_id'];
+  $equipment_type = $_POST['equipment_type'];
+  $equipmentStatus = "ready";
+  $cost = $_POST['cost'];
   $notes = $_POST['notes'];
 
 
   $query = "INSERT INTO equipment(equipmentID, equipmentType, equipmentStatus,
-    lastCleanedBy, dateAdded, dateRemoved, notes) ";
+    lastCleanedBy, cost, dateAdded, dateRemoved, notes) ";
   $query .= "VALUES('{$equipment_id}', '{$equipment_type}', '{$equipmentStatus}',
-    '{$lastCleanedBy}', '{$dateAdded}', '{$dateRemoved}', '{$notes}')";
+    NULL, '{$cost}', now(), NULL, '{$notes}')";
 
   $create_user_query = mysqli_query($connection, $query);
   confirm_query($create_user_query);
@@ -30,6 +28,11 @@ if(isset($_POST['create_equipment'])){
   <div class="form-group">
     <label for="equipment_type">Equipment Type</label>
     <input type="text" class="form-control" name="equipment_type">
+  </div>
+
+  <div class="form-group">
+    <label for="cost">Cost</label>
+    <input type="text" class="form-control" name="cost">
   </div>
 
   <div class="form-group">
