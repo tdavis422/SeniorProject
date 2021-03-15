@@ -94,7 +94,7 @@ if(isset($_SESSION['username'])){
                 <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Profile </a>
             </li>
 			<li>
-				<a href="clear_database.php"><i class="fa fa-fw fa-wrench"></i> Clear Database </a>
+				<a href="cleardatabase.php"><i class="fa fa-fw fa-wrench"></i> Clear Database </a>
 			</li>
         </ul>
     </div>
