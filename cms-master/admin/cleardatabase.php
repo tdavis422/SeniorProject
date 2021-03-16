@@ -23,19 +23,16 @@
 					if(confirm("Are you sure you want to clear the checkouts of the database?"))
 					{
 						<?php
-							$txt1 = "Here";
-							//$pdo = new PDO('mysql:host=localhost;dbname=cms', 'root', '');
-							$sql = "TRUNCATE TABLE 'checkouts'"; 
-							mysql_query($connection, $sql);
-							//$stmt = $connection->prepare($sql);
-							//echo "<h2>" . $txt1 . "</h2>";
-							//$stmt->execute($stmt);
-						?>
-						alert("Check-ins have be cleared and redirecting to Admin Dashboard")
-						//window.location.href = "index.php";
+							
+							$query = "SELECT 'TRUNCATE TABLE' + checkouts FROM INFORMATION_SCHEMA>TABLES WHERE TABLE_SCHEMA = 'cms'";
+
+							//mysql_query($connection, $query); ?>
+							alert("Emptyed the checkouts table");
+							
+						
 					} else
 					{
-						alert("Redirecting to Admin Dashboard")
+						alert("Redirecting to Admin Dashboard");
 						window.location.href = "index.php";
 					}
 				}
@@ -58,3 +55,53 @@
 
 
 <?php include "includes/admin_footer.php" ?>
+
+
+
+<!--
+
+						////<?php //$query = "SELECT 'TRUNCATE TABLE' + checkouts FROM INFORMATION_SCHEMA>TABLES WHERE TABLE_SCHEMA = 'cms'"; ?>
+						
+						//if((<?php //mysql_query($connection, $query); ?>) != null)
+						{
+							alert("Check-ins have be cleared and redirecting to Admin Dashboard")
+								window.location.href = "index.php";
+						} else
+						{
+							alert("Could not clear the database");
+						}
+
+
+
+							//These are some the attempts in no certain order
+							$pdo = new PDO('mysql:host=localhost;dbname=cms', 'root', '');
+							$sql = "TRUNCATE TABLE 'checkouts'"; 
+							mysql_query($connection, $sql);
+							$stmt = $connection->prepare($sql);
+							echo "<h2>" . $txt1 . "</h2>";
+							$stmt->execute($stmt);
+							
+							
+							/////This is the code that is used to define the $connection variable
+							$db['db_host'] = "localhost";
+							$db['db_user'] = "root";
+							$db['db_pass'] = "";
+							$db['db_name'] = "cms";
+
+							foreach($db as $key => $value)
+							{
+								define(strtoupper($key), $value);
+							}
+
+							$connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+							if($connection)
+							{
+								//echo "We are connected";
+							}
+
+
+
+
+-->
+
+
