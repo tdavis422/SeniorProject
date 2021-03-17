@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 
@@ -14,7 +16,10 @@
 					Do you want to clear the database?
 					<small><?=$_SESSION['username']?></small>
 				</h1>
-			
+			<?php 
+				
+				$connection = mysqli_connect("localhost", "root", "", "cms");
+			?>
 			
 			<script language="javascript">
 				function clearData()
@@ -24,10 +29,13 @@
 					{
 						<?php
 							
-							$query = "SELECT 'TRUNCATE TABLE' + checkouts FROM INFORMATION_SCHEMA>TABLES WHERE TABLE_SCHEMA = 'cms'";
-
-							//mysql_query($connection, $query); ?>
-							alert("Emptyed the checkouts table");
+							//require_once'db.php';
+							$connection = mysqli_connect("localhost", "root", "", "cms");
+							 
+							$query = "TRUNCATE TABLE `checkouts`";// + checkouts FROM INFORMATION_SCHEMA>TABLES WHERE TABLE_SCHEMA = 'cms'";
+							mysqli_query($query, $connection); 
+						?>
+						alert("Emptyed the checkouts table");
 							
 						
 					} else
