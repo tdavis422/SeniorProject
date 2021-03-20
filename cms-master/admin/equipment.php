@@ -11,8 +11,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header">
-            Welcome to Admin
-            <small><?=$_SESSION['username']?></small>
+            Equipment
           </h1>
 <?php
 if(isset($_GET['source'])){
@@ -31,9 +30,6 @@ switch($source){
   case 'edit':
     include "includes/edit_equipment.php";
     break;
-  case 'remove':
-	  include "includes/remove_equipment.php";
-	  break;
   case 'add_type':
     include "includes/add_equipment_type.php";
     break;

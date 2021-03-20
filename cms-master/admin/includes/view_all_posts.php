@@ -84,7 +84,6 @@ while($row = mysqli_fetch_assoc($select_posts)){
   $post_id = $row['post_id'];
   $post_author = $row['post_author'];
   $post_title = $row['post_title'];
-  $post_category_id = $row['post_category_id'];
   $post_status = $row['post_status'];
   $post_image = $row['post_image'];
   $post_tags = $row['post_tags'];
