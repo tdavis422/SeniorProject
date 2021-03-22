@@ -16,6 +16,11 @@
 					Do you want to clear the database?
 					<small><?=$_SESSION['username']?></small>
 				</h1>
+			<?php 
+				
+				$connection = mysqli_connect("localhost", "root", "", "cms");
+			?>
+			
 			<script language="javascript">
 				function clearData()
 				{
@@ -23,28 +28,35 @@
 					if(confirm("Are you sure you want to clear the checkouts of the database?"))
 					{
 						<?php
+							
+							//require_once'db.php';
+							$connection = mysqli_connect("localhost", "root", "", "cms");
+							 
 							$query = "TRUNCATE TABLE `checkouts`";// + checkouts FROM INFORMATION_SCHEMA>TABLES WHERE TABLE_SCHEMA = 'cms'";
-							mysqli_query($connection, $query);
+							mysqli_query($query, $connection); 
 						?>
-						alert("Emptyed the checkouts table and redirecting to dashboard");
-
-
+						alert("Emptyed the checkouts table");
+							
+						
+					} else
+					{
+						alert("Redirecting to Admin Dashboard");
+						window.location.href = "index.php";
 					}
-          window.location.replace("index.php")
 				}
-
+				
 				function ref()
 				{
 					alert("Redirecting to Admin Dashboard")
-					window.location.replace("index.php")
+					window.location.href = "index.php";
 				}
 			</script>
-
+		
 			<button type="button" name="confirm" onclick="clearData()">Yes</button>
 			<button type="button" name="deny" onclick="ref()">No</button>
-
-			</div>
-
+			
+			</div>	
+			
 		</div>
 
 
@@ -57,7 +69,7 @@
 <!--
 
 						////<?php //$query = "SELECT 'TRUNCATE TABLE' + checkouts FROM INFORMATION_SCHEMA>TABLES WHERE TABLE_SCHEMA = 'cms'"; ?>
-
+						
 						//if((<?php //mysql_query($connection, $query); ?>) != null)
 						{
 							alert("Check-ins have be cleared and redirecting to Admin Dashboard")
@@ -71,13 +83,13 @@
 
 							//These are some the attempts in no certain order
 							$pdo = new PDO('mysql:host=localhost;dbname=cms', 'root', '');
-							$sql = "TRUNCATE TABLE 'checkouts'";
+							$sql = "TRUNCATE TABLE 'checkouts'"; 
 							mysql_query($connection, $sql);
 							$stmt = $connection->prepare($sql);
 							echo "<h2>" . $txt1 . "</h2>";
 							$stmt->execute($stmt);
-
-
+							
+							
 							/////This is the code that is used to define the $connection variable
 							$db['db_host'] = "localhost";
 							$db['db_user'] = "root";
@@ -99,3 +111,5 @@
 
 
 -->
+
+

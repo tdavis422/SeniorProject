@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header">
-            Posts
+            Welcome to admin
             <small><?=$_SESSION['username']?></small>
           </h1>
 <?php
