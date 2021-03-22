@@ -6,12 +6,12 @@
       <th>Status</th>
       <th>Last Cleaned By</th>
       <th>Cost</th>
-	  <th>Date Added</th>
-	  <th>Date Removed From Use</th>
-	  <th>Notes</th>
-	  <th>Sanitize?</th>
-	  <th>Edit</th>
-	  <th>Remove From Use</th>
+	    <th>Date Added</th>
+	    <th>Date Removed From Use</th>
+	    <th>Notes</th>
+	    <th>Sanitize?</th>
+	    <th>Edit</th>
+	    <th>Remove From Use</th>
     </tr>
   </thead>
   <tbody>
@@ -37,9 +37,9 @@ while($row = mysqli_fetch_assoc($select_equipment)){
   <td><?=$dateAdded?></td>
   <td><?=$dateRemoved?></td>
   <td><?=$notes?></td>
-  <td><a href='equipment.php?sanitize&sanitize=<?= $equipmentID ?>'>Sanitize</a></td>
-  <td><a href='equipment.php?edit&edit=<?= $equipmentID ?> '>Edit</a></td>
-  <td><a href='equipment.php?remove=<?= $equipmentID ?> '>Remove</a></td>
+  <td><a href='equipment.php?source=sanitize&sanitizeEquipment=<?= $equipmentID ?>'>Sanitize</a></td>
+  <td><a href='equipment.php?source=edit&editEquipment=<?= $equipmentID ?> '>Edit</a></td>
+  <td><a href='equipment.php?source=remove&removeEquipment=<?= $equipmentID ?> '>Remove</a></td>
 </tr>
 <?php
 }
@@ -49,7 +49,7 @@ while($row = mysqli_fetch_assoc($select_equipment)){
 <?php
 if(isset($_GET['remove'])){
   $the_equipment_id = $_GET['remove'];
-  $query = "UPDATE equipment SET equipmentStatus = removed WHERE equipmentID = {$the_equipment_ID} ";
+  $query = "UPDATE equipment SET equipmentStatus='removed' WHERE equipmentID={$the_equipment_ID}";
   $remove_equipment_query = mysqli_query($connection, $query);
   header("Location: equipment.php");
 }

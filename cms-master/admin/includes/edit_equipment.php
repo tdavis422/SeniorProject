@@ -1,12 +1,12 @@
 <?php
-if(isset($_POST['edit'])){
-  $the_equipment_id = $_GET['$edit'];
-  $query = "SELECT * FROM equipment WHERE equipmentID = $the_equipment_id ";
+if(isset($_GET['edit'])){
+  $the_equipment_id = $_GET['editEquipment'];
+  $query = "SELECT * FROM equipment WHERE equipmentID = '{$the_equipment_id}' ";
   $select_equipment_query = mysqli_query($connection, $query);
   confirm_query($select_equipment_query);
 
   while($row = mysqli_fetch_assoc($select_equipment_query)){
-    $edit_equipmentID = $row['equipmentID'];
+    $equipmentID = $row['equipmentID'];
     $equipmentType = $row['equipmentType'];
     $equipmentStatus = $row['equipmentStatus'];
     $lastCleanedBy = $row['lastCleanedBy'];
@@ -18,32 +18,28 @@ if(isset($_POST['edit'])){
 }
 
 if(isset($_POST['edit_equipment'])){
-  $equipmentID = $row['equipmentID'];
-  $cost = $row['cost'];
-  $dateAdded = $row['dateAdded'];
-  $notes = $row['notes'];
+  $cost = $_POST['cost'];
+  $dateAdded = $_POST['dateAdded'];
+  $notes = $_POST['notes'];
 
   $query = "UPDATE equipment SET ";
-  $query .= "equipmentID = '{$equipmentID}', ";
   $query .= "equipmentStatus = ready, ";
   $query .= "lastCleanedBy = Replaced, ";
   $query .= "cost = '{$cost}', ";
   $query .= "dateAdded = now(), ";
   $query .= "dateRemoved = NULL, ";
   $query .= "notes = '{$notes}', ";
-  $query .= "WHERE equipmentID = {$edit_equipmentID}";
+  $query .= "WHERE equipmentID = {$the_equipment_id}";
 
   $edit_equipment_query = mysqli_query($connection, $query);
   confirm_query($edit_equipment_query);
+?>
+  Equipment Updated: <a href='equipment.php'>View Equipment</a>
+<?php
 }
 ?>
 
 <form class="" action="" method="post" enctype="multipart/form-data">
-  <div class="form-group">
-    <label for="equipmentID">Scan or Enter Equipment ID</label>
-    <input type="text" class="form-control" value="<?=$equipmentID?>" name="equipmentID">
-  </div>
-
   <div class="form-group">
     <label for="cost">Cost</label>
     <input type="text" class="form-control" value="<?=$cost?>" name="cost">

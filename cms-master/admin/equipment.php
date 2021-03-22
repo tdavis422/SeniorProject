@@ -25,10 +25,13 @@ switch($source){
     include "includes/add_equipment.php";
     break;
   case 'sanitize':
-	include "includes/sanitize_equipment.php";
-	break;
+	  include "includes/sanitize_equipment.php";
+    break;
   case 'edit':
     include "includes/edit_equipment.php";
+    break;
+  case 'remove':
+    include "includes/remove_equipment.php";
     break;
   case 'add_type':
     include "includes/add_equipment_type.php";
