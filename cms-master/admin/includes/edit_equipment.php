@@ -1,35 +1,11 @@
 <?php
-if(isset($_GET['edit'])){
-  $the_equipment_id = $_GET['editEquipment'];
-  $query = "SELECT * FROM equipment WHERE equipmentID = '{$the_equipment_id}' ";
-  $select_equipment_query = mysqli_query($connection, $query);
-  confirm_query($select_equipment_query);
-
-  while($row = mysqli_fetch_assoc($select_equipment_query)){
-    $equipmentID = $row['equipmentID'];
-    $equipmentType = $row['equipmentType'];
-    $equipmentStatus = $row['equipmentStatus'];
-    $lastCleanedBy = $row['lastCleanedBy'];
-    $cost = $row['cost'];
-    $dateAdded = $row['dateAdded'];
-    $dateRemoved = $row['dateRemoved'];
-    $notes = $row['notes'];
-  }
-}
-
 if(isset($_POST['edit_equipment'])){
+  $equipmentID = $_GET['editEquipment'];
   $cost = $_POST['cost'];
   $dateAdded = $_POST['dateAdded'];
   $notes = $_POST['notes'];
 
-  $query = "UPDATE equipment SET ";
-  $query .= "equipmentStatus = ready, ";
-  $query .= "lastCleanedBy = Replaced, ";
-  $query .= "cost = '{$cost}', ";
-  $query .= "dateAdded = now(), ";
-  $query .= "dateRemoved = NULL, ";
-  $query .= "notes = '{$notes}', ";
-  $query .= "WHERE equipmentID = {$the_equipment_id}";
+  $query = "UPDATE equipment SET equipmentStatus = 'ready', lastCleanedBy = 'Replaced', cost = '{$cost}', dateAdded = now(), dateRemoved = NULL, notes = '{$notes}' WHERE equipmentID = {$the_equipment_id}";
 
   $edit_equipment_query = mysqli_query($connection, $query);
   confirm_query($edit_equipment_query);
@@ -42,7 +18,7 @@ if(isset($_POST['edit_equipment'])){
 <form class="" action="" method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="cost">Cost</label>
-    <input type="text" class="form-control" value="<?=$cost?>" name="cost">
+    <input type="text" class="form-control" name="cost">
   </div>
 
   <div class="form-group">

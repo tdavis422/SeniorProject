@@ -27,8 +27,6 @@
 							mysqli_query($connection, $query);
 						?>
 						alert("Emptyed the checkouts table and redirecting to dashboard");
-
-
 					}
           window.location.replace("index.php")
 				}
