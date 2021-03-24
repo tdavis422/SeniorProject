@@ -2,10 +2,9 @@
 if(isset($_POST['edit_equipment'])){
   $equipmentID = $_GET['editEquipment'];
   $cost = $_POST['cost'];
-  $dateAdded = $_POST['dateAdded'];
   $notes = $_POST['notes'];
 
-  $query = "UPDATE equipment SET equipmentStatus = 'ready', lastCleanedBy = 'Replaced', cost = '{$cost}', dateAdded = now(), dateRemoved = NULL, notes = '{$notes}' WHERE equipmentID = {$the_equipment_id}";
+  $query = "UPDATE equipment SET equipmentStatus = 'ready', lastCleanedBy = 'Replaced', cost = '{$cost}', dateAdded = now(), dateRemoved = NULL, notes = '{$notes}' WHERE equipmentID = {$equipmentID}";
 
   $edit_equipment_query = mysqli_query($connection, $query);
   confirm_query($edit_equipment_query);

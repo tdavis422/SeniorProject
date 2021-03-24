@@ -46,11 +46,3 @@ while($row = mysqli_fetch_assoc($select_equipment)){
 ?>
   </tbody>
 </table>
-<?php
-if(isset($_GET['remove'])){
-  $the_equipment_id = $_GET['remove'];
-  $query = "UPDATE equipment SET equipmentStatus='removed' WHERE equipmentID={$the_equipment_ID}";
-  $remove_equipment_query = mysqli_query($connection, $query);
-  header("Location: equipment.php");
-}
-?>

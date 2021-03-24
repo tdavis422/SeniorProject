@@ -3,37 +3,29 @@
   $equipmentID = $_GET['sanitizeEquipment'];
 ?>
 <script language="javascript">
-  function sanitizeEquipment()
+  function sanitize()
   {
     var a;
     if(confirm("Are you sure you sanitized the equipment
                 and checked for damage?"))
     {
       <?php
-        $query = "UPDATE equipment SET ";
-        $query .= "equipmentStatus = ready, ";
-        $query .= "lastCleanedBy = '{$username}' ";
-        $query .= "WHERE equipmentID = '{$equipmentID}'";
-        $sanitize_query = mysqli_query($connection, $query);
-        confirm_query($sanitize_query);
+        $query = "UPDATE equipment SET equipmentStatus = ready, lastCleanedBy = '{$username}' WHERE equipmentID = {$equipmentID}";
+        mysqli_query($connection, $query);
       ?>
       alert("Sanitation and damage check complete. Redirecting to Equipment");
     }
     window.location.replace("../equipment.php")
   }
 
-  function damagedEquipment()
+  function damaged()
   {
     var a;
     if(confirm("Are you sure this equipment is damaged?"))
     {
       <?php
-        $query = "UPDATE equipment SET";
-        $query .= "equipmentStatus = damaged, ";
-        $query .= "lastCleanedBy = '{$username}' ";
-        $query .= "WHERE equipmentID = '{$equipmentID}'";
-        $damage_query = mysqli_query($connection, $query);
-        confirm_query($damage_query);
+        $query = "UPDATE equipment SET equipmentStatus = damaged, lastCleanedBy = '{$username}' WHERE equipmentID = {$equipmentID}";
+        mysqli_query($connection, $query);
       ?>
       alert("Equipment marked as damaged.
              Redirecting to Equipment");
@@ -50,6 +42,6 @@
 <p>
   Have you sanitized and checked for damage?
 </p>
-<button type="button" name="confirm" onclick="sanitizeEquipment()">Sanitize</button>
-<button type="button" name="confirm" onclick="damagedEquipment()">Damaged</button>
-<button type="button" name="deny" onclick="ref()">No</button>
+<button type="button" name="confirm" onclick="sanitize()">Sanitize</button>
+<button type="button" name="confirm" onclick="damaged()">Damaged</button>
+<button type="button" onclick="ref()">No</button>
