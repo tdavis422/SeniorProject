@@ -23,7 +23,7 @@
 					if(confirm("Are you sure you want to clear the checkouts of the database?"))
 					{
 						<?php
-							$query = "TRUNCATE TABLE `checkouts`";// + checkouts FROM INFORMATION_SCHEMA>TABLES WHERE TABLE_SCHEMA = 'cms'";
+							$query = "TRUNCATE TABLE `checkouts`";
 							mysqli_query($connection, $query);
 						?>
 						alert("Emptyed the checkouts table and redirecting to dashboard");
@@ -37,15 +37,8 @@
 					window.location.replace("index.php")
 				}
 			</script>
-
 			<button type="button" name="confirm" onclick="clearData()">Yes</button>
 			<button type="button" name="deny" onclick="ref()">No</button>
-
 			</div>
-
 		</div>
-
-
-
-
 <?php include "includes/admin_footer.php" ?>

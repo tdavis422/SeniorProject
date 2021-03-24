@@ -37,7 +37,7 @@ while($row = mysqli_fetch_assoc($select_equipment)){
   <td><?=$dateAdded?></td>
   <td><?=$dateRemoved?></td>
   <td><?=$notes?></td>
-  <td><a href='equipment.php?source=sanitize&sanitizeEquipment=<?= $equipmentID ?>'>Sanitize</a></td>
+  <td><a href='equipment.php?source=sanitize&sanitizeE=<?= $equipmentID ?>'>Sanitize</a></td>
   <td><a href='equipment.php?source=edit&editEquipment=<?= $equipmentID ?> '>Edit</a></td>
   <td><a href='equipment.php?source=remove&removeEquipment=<?= $equipmentID ?> '>Remove</a></td>
 </tr>
