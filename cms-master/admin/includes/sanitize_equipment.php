@@ -5,30 +5,32 @@
 <script language="javascript">
   function sanitize()
   {
-    var a;
     if(confirm("Are you sure you sanitized the equipment and checked for damage?"))
     {
       <?php
-      $query = "UPDATE equipment SET equipmentStatus = 'ready', lastCleanedBy = '{$username}' WHERE equipmentID = {$equipmentID}";
-      mysqli_query($connection, $query);
+        $sanitize_query = "UPDATE equipment SET equipmentStatus = 'ready', lastCleanedBy = '{$username}' WHERE equipmentID = {$equipmentID}";
+        $sanQuery = mysqli_query($connection, $sanitize_query);
+        confirm_query($sanQuery);
       ?>
       alert("Sanitation and damage check complete. Redirecting to Equipment");
     }
-    window.location.replace("./equipment.php")
+    window.location.replace("./equipment.php");
   }
+</script>
 
+<script language="javascript">
   function damaged()
   {
-    var a;
     if(confirm("Are you sure this equipment is damaged?"))
     {
       <?php
-      $query = "UPDATE equipment SET equipmentStatus = 'damaged', lastCleanedBy = '{$username}' WHERE equipmentID = {$equipmentID}";
-      mysqli_query($connection, $query);
+        $query = "UPDATE equipment SET equipmentStatus = 'damaged', lastCleanedBy = '{$username}' WHERE equipmentID = {$equipmentID}";
+        $damageQuery = mysqli_query($connection, $query);
+        confirm_query($damageQuery);
       ?>
       alert("Equipment marked as damaged. Redirecting to Equipment");
     }
-    window.location.replace("./equipment.php")
+    window.location.replace("./equipment.php");
   }
 
   function ref()
@@ -38,6 +40,6 @@
   }
 </script>
 <p> Have you sanitized and checked for damage? </p>
-<button type="button" name="confirm" onclick="sanitize()">Sanitize</button>
-<button type="button" name="confirm" onclick="damaged()">Damaged</button>
+<button type="button" name="sanitize" onclick="sanitize()">Sanitize</button>
+<button type="button" name="damaged" onclick="damaged()">Damaged</button>
 <button type="button" name="no" onclick="ref()">No</button>
