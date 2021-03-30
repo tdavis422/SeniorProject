@@ -3,12 +3,14 @@
   $equipmentID = $_GET['sanitizeE'];
 ?>
 <script language="javascript">
+
+
   function sanitize()
   {
     if(confirm("Are you sure you sanitized the equipment and checked for damage?"))
     {
       <?php
-        $sanitize_query = "UPDATE equipment SET equipmentStatus = 'ready', lastCleanedBy = '{$username}' WHERE equipmentID = {$equipmentID}";
+        $sanitize_query = "UPDATE equipment SET equipmentStatus = 'sanitized', lastCleanedBy = '{$username}' WHERE equipmentID = {$equipmentID}";
         $sanQuery = mysqli_query($connection, $sanitize_query);
         confirm_query($sanQuery);
       ?>
@@ -16,9 +18,7 @@
     }
     window.location.replace("./equipment.php");
   }
-</script>
 
-<script language="javascript">
   function damaged()
   {
     if(confirm("Are you sure this equipment is damaged?"))
@@ -28,6 +28,7 @@
         $damageQuery = mysqli_query($connection, $query);
         confirm_query($damageQuery);
       ?>
+      console.log("Pass");
       alert("Equipment marked as damaged. Redirecting to Equipment");
     }
     window.location.replace("./equipment.php");

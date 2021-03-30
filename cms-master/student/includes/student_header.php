@@ -3,11 +3,6 @@ include "../includes/db.php";
 ob_start();
 session_start();
 ?>
-<?php
-  if(isset($_POST['studentID'])){
-    $_SESSION['studentID'] = $_POST['studentID'];
-  }
-?>
 <!DOCTYPE html>
 <html lang="en">
 
