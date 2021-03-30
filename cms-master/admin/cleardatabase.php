@@ -19,26 +19,55 @@
 			<script language="javascript">
 				function clearData()
 				{
-					var a;
 					if(confirm("Are you sure you want to clear the checkouts of the database?"))
 					{
 						<?php
 							$query = "TRUNCATE TABLE `checkouts`";
 							mysqli_query($connection, $query);
+							$query2 = "SELECT * FROM checkouts";
+							$result = null;
+							$result = mysqli_query($connection, $query2);
+							//echo "The Result is $result";
+							if(isset($result))
+							{
 						?>
-						alert("Emptyed the checkouts table and redirecting to dashboard");
+							
+								alert("Emptied the checkouts table and redirecting to dashboard"); 
+								window.location.replace("index.php");	
+						<?php	
+							}
+							else 
+							{
+						?>
+									alert("Database was not able to empty.  Redirecting to admin page"); 
+									window.location.replace("index.php");
+								
+						<?php
+							}
+						?>
 					}
-          window.location.replace("index.php")
+
+          window.location.replace("index.php");
+
 				}
 
 				function ref()
 				{
-					alert("Redirecting to Admin Dashboard")
-					window.location.replace("index.php")
+					alert("Redirecting to Admin Dashboard");
+					window.location.replace("index.php");
 				}
 			</script>
-			<button type="button" name="confirm" onclick="clearData()">Yes</button>
-			<button type="button" name="deny" onclick="ref()">No</button>
+			
+			<h2>
+			
+			</h2>
+			
+			<button type="button" class="btn btn-danger" onclick="clearData()">Yes</button>
+				
+			
+			<button type="button" class="btn btn-success" onclick="ref()">No</button>
+			
 			</div>
 		</div>
+		
 <?php include "includes/admin_footer.php" ?>
