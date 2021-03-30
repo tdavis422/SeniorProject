@@ -18,10 +18,10 @@
 
   <!-- Login -->
   <div class="well">
-    <h4>Login</h4>
+    <h4>Worker/Admin Login</h4>
     <form action="includes/login.php" method="post">
       <div class="form-group">
-        <input name="username" type="text" class="form-control" placeholder="Enter Username"/>
+      <input name="username" type="text" class="form-control" placeholder="Enter Username"/>
       </div>
       <div class="input-group">
         <input name="password" type="password" class="form-control" placeholder="Enter password"/>
@@ -35,4 +35,20 @@
     <!-- /.input-group -->
   </div>
 
+  <!--Student Login -->
+  <div class="well">
+    <h4>Student Login</h4>
+    <form action="includes/IDVerification.php" method="post">
+      <div class="form-group">
+        <input name="studentID" type="text" class="form-control" placeholder="Enter Student ID"/>
+      </div>
+      <span class="input-group-btn">
+        <button name="studentLogin" class="btn btn-primary" type="submit">
+          Submit
+        </button>
+      </span>
+      </div>
+    </form><!--search form-->
+    <!-- /.input-group -->
+  </div>
 </div>
