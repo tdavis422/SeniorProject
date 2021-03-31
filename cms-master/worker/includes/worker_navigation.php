@@ -28,6 +28,7 @@ if(isset($_SESSION['username'])){
                 <li>
                     <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
                 </li>
+
                 <li>
                     <a href="../includes/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                 </li>
@@ -40,6 +41,7 @@ if(isset($_SESSION['username'])){
             <li>
                 <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
+
             <li>
                 <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="posts_dropdown" class="collapse">
@@ -51,15 +53,16 @@ if(isset($_SESSION['username'])){
                     </li>
                 </ul>
             </li>
-            
-			<li>
-				<a href="javascript:;" data-toggle="collapse" data-target="#equipment_dropdown"><i class="fa fa-fw fa-wrench"></i> Equipment <i class="fa fa-fw fa-caret-down"></i></a>
-				<ul id="equipment_dropdown" class="collapse">
-					<li>
-						<a href="equipment.php"> View All Equipment </a>
-					</li>
-				</ul>
-			</li>
+
+      			<li>
+      				<a href="javascript:;" data-toggle="collapse" data-target="#equipment_dropdown"><i class="fa fa-fw fa-wrench"></i> Equipment <i class="fa fa-fw fa-caret-down"></i></a>
+      				<ul id="equipment_dropdown" class="collapse">
+      					<li>
+      						<a href="equipment.php"> View All Equipment </a>
+      					</li>
+      				</ul>
+      			</li>
+
             <li>
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
@@ -68,13 +71,19 @@ if(isset($_SESSION['username'])){
                     </li>
                 </ul>
             </li>
-            <li class="">
+
+            <li>
+                <a href="verifyStudents.php"><i class="fa fa-fw fa-arrows-v"></i> Verify Students </a>
+            </li>
+
+            <li>
                 <a href="comments.php"><i class="fa fa-fw fa-file"></i> Comments </a>
             </li>
+
             <li>
                 <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Profile </a>
             </li>
-			
+
         </ul>
     </div>
     <!-- /.navbar-collapse -->

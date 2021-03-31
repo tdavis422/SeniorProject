@@ -1,5 +1,5 @@
 <?php
-include "./includes/student_header.php"
+include "./includes/student_header.php";
 
 if(isset($_POST['submitPingPong'])){
   $studentID = $_SESSION['studentID'];
