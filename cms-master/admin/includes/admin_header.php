@@ -2,6 +2,7 @@
 ob_start();
 session_start();
 include "../includes/db.php";
+include "../functions.php";
 
 if($_SESSION['user_role'] !== 'admin'){
   header("Location: ../index.php");

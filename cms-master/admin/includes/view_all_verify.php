@@ -8,7 +8,6 @@
       <th>equipmentID</th>
       <th>Approve</th>
       <th>Unapprove</th>
-      <th>Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -42,13 +41,17 @@ while($row = mysqli_fetch_assoc($select_students)){
 <?php
 if(isset($_GET['approve'])){
   $id = $_GET['approve'];
+  $workerID = $_SESSION['username'];
   $approve_query = "INSERT INTO checkouts(date, equipmentID, studentID, workerID, timeOut)";
-  $approve_query .= "VALUES('{$date}', '{$equipmentID}', '{$studentID}', '{$_SESSION['username']}', '{$timeout}')";
+  $approve_query .= "VALUES('{$date}', '{$equipmentID}', '{$studentID}', '{$workerID}', '{$timeout}')";
   $approve_student_query = mysqli_query($connection, $approve_query);
-  $update_query = "UPDATE checkouts SET equipmentStatus = 'In Use' WHERE date === now() && equipmentID === $id && studentID === $studentID";
+  confirm_query($approve_student_query);
+  $update_query = "UPDATE equipment SET equipmentStatus = 'In Use' WHERE date === now() && equipmentID === $id && studentID === $studentID";
   $update_sent_query = mysqli_query($connection, $update_query);
+  confirm_query($update_sent_query);
   $query = "DELETE FROM verifyStudents WHERE equipmentID = $id";
   $update_verify_query = mysqli_query($connection, $query);
+  confirm_query($update_verify_query);
   echo "</script type='text/javascript'>alert('Student has been checked in. Returning to Verify Students.')</script>";
   header("Location: verifyStudents.php");
 }

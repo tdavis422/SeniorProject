@@ -2,11 +2,11 @@
 include "./includes/student_header.php";
 
 if(isset($_POST['submitPingPong'])){
-  $studentID = $_SESSION['studentID'];
+  //$studentID = $_SESSION['studentID'];
   $equipmentPPID = $_POST['pingPong'];
 
   $query = "INSERT INTO verifystudents(date, timeOut, studentID, equipmentID) ";
-  $query .= "VALUES(now(), now(), '{$studentID}', '{$equipmentPPID}')";
+  $query .= "VALUES(now(), now(), '766617', '{$equipmentPPID}')";
 
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
@@ -19,7 +19,7 @@ else if(isset($_POST['submitPool'])){
   $equipmentpoolID = $_POST['pool'];
 
   $query = "INSERT INTO verifystudents(date, timeOut, studentID, equipmentID) ";
-  $query .= "VALUES(now(), now(), '{$studentID}', '{$equipmentpoolID}')";
+  $query .= "VALUES(now(), now(), '766617', '{$equipmentpoolID}')";
 
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
@@ -32,7 +32,7 @@ else if(isset($_POST['submitFoosball'])){
   $equipmentfoosballID = $_POST['foosball'];
 
   $query = "INSERT INTO verifystudents(date, timeOut, studentID, equipmentID) ";
-  $query .= "VALUES(now(), now(), '{$studentID}', '{$equipmentfoosballID}')";
+  $query .= "VALUES(now(), now(), '766617', '{$equipmentfoosballID}')";
 
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
@@ -45,7 +45,7 @@ else if(isset($_POST['submitXbox'])){
   $equipmentxboxID = $_POST['xbox'];
 
   $query = "INSERT INTO verifystudents(date, timeOut, studentID, equipmentID) ";
-  $query .= "VALUES(now(), now(), '{$studentID}', '{$equipmentxboxID}')";
+  $query .= "VALUES(now(), now(), '766617', '{$equipmentxboxID}')";
 
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
@@ -58,7 +58,7 @@ else if(isset($_POST['submitPC'])){
   $equipmentPCID = $_POST['pc'];
 
   $query = "INSERT INTO verifystudents(date, timeOut, studentID, equipmentID) ";
-  $query .= "VALUES(now(), now(), '{$studentID}', '{$equipmentPCID}')";
+  $query .= "VALUES(now(), now(), '766617', '{$equipmentPCID}')";
 
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
@@ -71,7 +71,7 @@ else if(isset($_POST['submitFriend'])){
   $equipmentfriendsID = $_POST['friends'];
 
   $query = "INSERT INTO verifystudents(date, timeOut, studentID, equipmentID) ";
-  $query .= "VALUES(now(), now(), '{$studentID}', '{$equipmentfriendsID}')";
+  $query .= "VALUES(now(), now(), '766617', '{$equipmentfriendsID}')";
 
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
