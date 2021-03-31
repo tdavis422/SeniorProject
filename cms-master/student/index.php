@@ -9,12 +9,12 @@
       <!-- Page Heading -->
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header">
-            <small><?=$_SESSION['studentID']?></small>
-          </h1>
+          
         </div>
       </div>
-
+      <h3>
+        Please choose a type of equipment on the left side of the screen
+      </h3>
 
     <!-- /.container-fluid -->
   </div>

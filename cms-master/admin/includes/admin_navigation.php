@@ -40,6 +40,7 @@ if(isset($_SESSION['username'])){
             <li>
                 <a href="index.php"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
             </li>
+
             <li>
                 <a href="javascript:;" data-toggle="collapse" data-target="#posts_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="posts_dropdown" class="collapse">
@@ -51,32 +52,36 @@ if(isset($_SESSION['username'])){
                     </li>
                 </ul>
             </li>
+
             <li>
-                <a href="javascript:;" data-toggle="collapse" data-target="#reports_dropdown"><i class="fa fa-fw fa-file"></i> Reports <i class="fa fa-fw fa-caret-down"></i></a>
-				<ul id="reports_dropdown" class="collapse">
-					<li>
-						<a href="report.php?source=allReport"> Create Report(All) </a>
-					</li>
-					<li>
-						<a href="report.php?source=specReport"> Create Report(Specific) </a>
-					</li>
-				</ul>
+              <a href="javascript:;" data-toggle="collapse" data-target="#reports_dropdown"><i class="fa fa-fw fa-file"></i> Reports <i class="fa fa-fw fa-caret-down"></i></a>
+      				<ul id="reports_dropdown" class="collapse">
+      					<li>
+      						<a href="report.php?source=allReport"> Create Report(All) </a>
+      					</li>
+      					<li>
+      						<a href="report.php?source=specReport"> Create Report(Specific) </a>
+      					</li>
+      				</ul>
             </li>
-			<li>
-				<a href="javascript:;" data-toggle="collapse" data-target="#equipment_dropdown"><i class="fa fa-fw fa-wrench"></i> Equipment <i class="fa fa-fw fa-caret-down"></i></a>
-				<ul id="equipment_dropdown" class="collapse">
-					<li>
-						<a href="equipment.php"> View All Equipment </a>
-					</li>
-					<li>
-						<a href="equipment.php?source=add_equipment"> Add Equipment </a>
-					</li>
-					<li>
-						<a href="equipment.php?source=add_type"> Add Equipment Type </a>
-					</li>
-				</ul>
-			</li>
+
+      			<li>
+      				<a href="javascript:;" data-toggle="collapse" data-target="#equipment_dropdown"><i class="fa fa-fw fa-wrench"></i> Equipment <i class="fa fa-fw fa-caret-down"></i></a>
+      				<ul id="equipment_dropdown" class="collapse">
+      					<li>
+      						<a href="equipment.php"> View All Equipment </a>
+      					</li>
+      					<li>
+      						<a href="equipment.php?source=add_equipment"> Add Equipment </a>
+      					</li>
+      					<li>
+      						<a href="equipment.php?source=add_type"> Add Equipment Type </a>
+      					</li>
+      				</ul>
+      			</li>
+
             <li>
+
                 <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
                 <ul id="demo" class="collapse">
                     <li>
@@ -87,6 +92,11 @@ if(isset($_SESSION['username'])){
                     </li>
                 </ul>
             </li>
+
+            <li class="">
+                <a href="verifyStudents.php"><i class="fa fa-fw fa-arrows-v"></i> Verify Students </a>
+            </li>
+
             <li class="">
                 <a href="comments.php"><i class="fa fa-fw fa-file"></i> Comments </a>
             </li>

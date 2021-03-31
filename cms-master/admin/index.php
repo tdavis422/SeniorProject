@@ -99,8 +99,8 @@ $user_count = mysqli_num_rows($select_all_users);
             </a>
           </div>
         </div>
-        <!--<div class="col-lg-3 col-md-6">
-          <div class="panel panel-red">
+        <div class="col-lg-3 col-md-6">
+          <div class="panel panel-purple">
             <div class="panel-heading">
               <div class="row">
                 <div class="col-xs-3">
@@ -108,16 +108,16 @@ $user_count = mysqli_num_rows($select_all_users);
                 </div>
                 <div class="col-xs-9 text-right">
 <?php
-/*$query = "SELECT * FROM categories";
-$select_all_categories = mysqli_query($connection, $query);
-$category_count = mysqli_num_rows($select_all_categories);*/
+$query = "SELECT * FROM verifystudents";
+$select_all_students = mysqli_query($connection, $query);
+$student_count = mysqli_num_rows($select_all_students);
 ?>
-                  <div class='huge'>4</div>
-                  <div>Categories</div>
+                  <div class='huge'><?=$student_count?></div>
+                  <div>Verify Students</div>
                 </div>
               </div>
             </div>
-            <a href="categories.php">
+            <a href="verifyStudents.php">
               <div class="panel-footer">
                 <span class="pull-left">View Details</span>
                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -126,26 +126,39 @@ $category_count = mysqli_num_rows($select_all_categories);*/
             </a>
           </div>
         </div>
-      </div>-->
+      </div>
       <!-- /.row -->
 <?php
-$query = "SELECT * FROM posts WHERE post_status = 'published'";
-$select_all_published_post = mysqli_query($connection, $query);
-$published_post_count = mysqli_num_rows($select_all_published_post);
+$query = "SELECT * FROM checkouts NATURAL JOIN equipment";
+$select_all_checkouts = mysqli_query($connection, $query);
+$checkouts = mysqli_num_rows($select_all_checkouts);
 
-$query = "SELECT * FROM posts WHERE post_status = 'draft'";
-$select_all_draft_post = mysqli_query($connection, $query);
-$draft_post_count = mysqli_num_rows($select_all_draft_post);
+$query = "SELECT * FROM checkouts NATURAL JOIN equipment WHERE equipmentType = '1'";
+$select_all_pingPong = mysqli_query($connection, $query);
+$pingPong = mysqli_num_rows($select_all_pingPong);
 
-$query = "SELECT * FROM comments WHERE comment_status = 'unapproved'";
-$unapproved_comment = mysqli_query($connection, $query);
-$unapproved_comment_count = mysqli_num_rows($unapproved_comment);
+$query = "SELECT * FROM checkouts NATURAL JOIN equipment WHERE equipmentType = '2'";
+$select_all_pool = mysqli_query($connection, $query);
+$pool = mysqli_num_rows($select_all_pool);
 
-$query = "SELECT * FROM users WHERE user_role = 'worker'";
-$select_all_workers = mysqli_query($connection, $query);
-$worker_count = mysqli_num_rows($select_all_workers);
+$query = "SELECT * FROM checkouts NATURAL JOIN equipment WHERE equipmentType = '3'";
+$select_all_foosball = mysqli_query($connection, $query);
+$foosball = mysqli_num_rows($select_all_foosball);
+
+$query = "SELECT * FROM checkouts NATURAL JOIN equipment WHERE equipmentType = '4'";
+$select_all_xbox = mysqli_query($connection, $query);
+$xbox = mysqli_num_rows($select_all_xbox);
+
+$query = "SELECT * FROM checkouts NATURAL JOIN equipment WHERE equipmentType = '5'";
+$select_all_pc = mysqli_query($connection, $query);
+$pc = mysqli_num_rows($select_all_pc);
+
+$query = "SELECT * FROM checkouts NATURAL JOIN equipment WHERE equipmentType = '6'";
+$select_all_friends = mysqli_query($connection, $query);
+$friends = mysqli_num_rows($select_all_friends);
+
  ?>
-<!--      <script type="text/javascript">
+      <!--<script type="text/javascript">
          google.charts.load('current', {'packages':['bar']});
          google.charts.setOnLoadCallback(drawChart);
 
@@ -153,17 +166,17 @@ $worker_count = mysqli_num_rows($select_all_workers);
            var data = google.visualization.arrayToDataTable([
              ['Data', 'Count'],
 <?php
-/*$element_text = ['All Posts', 'Active Posts', 'Draft Posts', 'Comments', 'Pending Comments', 'Users', 'Subscribers', 'Categories'];
-$element_count = [$post_count, $published_post_count, $draft_post_count, $comment_count, $unapproved_comment_count, $user_count, $subscriber_count, $category_count];
+/*$element_text = ['All Students', 'Ping Pong', 'Pool', 'Foosball', 'Xbox', 'PC', 'Friends'];
+$element_count = [$post_count, $published_post_count, $draft_post_count, $comment_count, $unapproved_comment_count, $user_count, $subscriber_count];
 for($i=0; $i<8; $i++){
 ?>
   ['<?=$element_text[$i]?>', <?=$element_count[$i]?>],
 <?php
 }*/
 ?>
-           ]);
+<!--           ]);
 
-           var options = {
+           /*var options = {
              chart: {
                title: '',
                subtitle: '',
@@ -173,8 +186,8 @@ for($i=0; $i<8; $i++){
            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
            chart.draw(data, google.charts.Bar.convertOptions(options));
-         }
-       </script>-->
+         }*/
+       <!--</script>-->
        <div id="columnchart_material" style="width: auto; height: 500px;"></div>
     </div>
     <!-- /.container-fluid -->

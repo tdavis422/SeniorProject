@@ -38,7 +38,7 @@
   <!--Student Login -->
   <div class="well">
     <h4>Student Login</h4>
-    <form action="includes/IDVerification.php" method="post">
+    <form action="student" method="post">
       <div class="form-group">
         <input name="studentID" type="text" class="form-control" placeholder="Enter Student ID"/>
       </div>
@@ -47,8 +47,7 @@
           Submit
         </button>
       </span>
-      </div>
     </form><!--search form-->
-    <!-- /.input-group -->
   </div>
+    <!-- /.input-group -->
 </div>

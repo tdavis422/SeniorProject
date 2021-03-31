@@ -14,15 +14,11 @@ session_start();
   }
 
   $IDverify = fopen("../Gameroom_Database_Download.txt", "r") or die("Unable to open file!");
-    while(!feof($IDverify))
-    {
-      foreach($lines as $line){
-        list($longID, $shortID, $lname, $fname, $photo) = explode(",", $IDverify);
-        if($studentID === $longID || $studentID === $shortID){
-          IDmatch();
-        }
-      }
-    }
-    header("Location: ../index.php");
+  $lines = explode("\n", $IDverify);
+  foreach($lines as $line){
+    echo $line . '<br>';
+  }
+
+  //header("Location: ../index.php");
   fclose($IDverify);
 ?>
