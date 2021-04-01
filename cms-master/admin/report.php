@@ -24,7 +24,7 @@ switch($source){
   case 'allReport':
     include "includes/createAllReport.php";
     break;
-  case 'specReport':
+  default:
 	include "includes/createSpecReport.php";
 	break;
 }
