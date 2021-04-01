@@ -1,5 +1,5 @@
 <?php
-		$query = "SELECT * FROM equipment NATURAL JOIN checkouts WHERE equipment.equipment.type = $requestedID";
+		$query = "SELECT * FROM equipment NATURAL JOIN checkouts WHERE equipment.equipmentType = $requestedID";
 		$select_equipment = mysqli_query($connection, $query);
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$equipment_id = $row['equipmentID'];
