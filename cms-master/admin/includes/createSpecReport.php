@@ -1,19 +1,3 @@
-<?php include "includes/admin_header.php" ?>
-<?php include "functions.php" ?>
-
-<div id="wrapper">
-
-<?php include "includes/admin_navigation.php" ?>
-
-  <div id="page-wrapper">
-    <div class="container-fluid">
-      <!-- Page Heading -->
-      <div class="row">
-        <div class="col-lg-12">
-          <h1 class="page-header">
-            Do you want to create a report for specific equipment or students?
-            <small><?=$_SESSION['username']?></small>
-          </h1>
 <?php
 		$query = "SELECT * FROM equipment NATURAL JOIN checkouts WHERE checkouts.equipmentID = " + $requestedID;
 		$select_equipment = mysqli_query($connection, $query);
@@ -52,11 +36,3 @@
 			<a href= "report.php">
 			<button>Students</button>
 			
-        </div>
-      </div>
-            <!-- /.container-fluid -->
-    </div>
-        <!-- /#page-wrapper -->
-</div>
-    <!-- /#wrapper -->
-<?php include "includes/admin_footer.php" ?>
