@@ -11,7 +11,6 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header">
-            Welcome to Admin
             <small><?=$_SESSION['username']?></small>
           </h1>
 <?php
@@ -22,24 +21,12 @@ if(isset($_GET['source'])){
 }
 
 switch($source){
-  case 'add_equipment':
-    include "includes/add_equipment.php";
+  case 'allReport':
+    include "includes/createAllReport.php";
     break;
-  case 'sanitize':
-	include "includes/sanitize_equipment.php";
+  case 'specReport':
+	include "includes/createSpecReport.php";
 	break;
-  case 'edit':
-    include "includes/edit_equipment.php";
-    break;
-  case 'remove':
-	  include "includes/remove_equipment.php";
-	  break;
-  case 'add_type':
-    include "includes/add_equipment_type.php";
-    break;
-  default:
-    include "includes/view_all_equipment.php";
-    break;
 }
 ?>
         </div>
