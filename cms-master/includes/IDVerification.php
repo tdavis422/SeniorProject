@@ -7,18 +7,18 @@ session_start();
     $studentID = $_POST['studentID'];
   }
 
-  function IDmatch(){
-    $_SESSION['studentID'] = $studentID;
-    $_SESSION['photo'] = $photo;
-    header("Location: ../student");
+  if ($file = fopen("../Gameroom Database Download.csv", "r")){
+    foreach($file as $line){
+        list($longID, $shortID, $lname, $fname, $photo) = explode(",", $line);
+        if ($studentID === $longID || $studentID === $shortID){
+          $_SESSION['studentID'] = $studentID;
+          fclose($line);
+          header("Location: ../student");
+        }
+    }
+  } else{
+    die("File can't be opened");
   }
 
-  $IDverify = fopen("../Gameroom_Database_Download.txt", "r") or die("Unable to open file!");
-  $lines = explode("\n", $IDverify);
-  foreach($lines as $line){
-    echo $line . '<br>';
-  }
-
-  //header("Location: ../index.php");
-  fclose($IDverify);
+  header("Location: ../index.php");
 ?>

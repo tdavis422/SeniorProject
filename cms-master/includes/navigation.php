@@ -25,6 +25,9 @@ session_start();
 		    </li>
 
         <li>
+          <a href="student">Student</a>
+
+        <li>
           <a href="registration.php">Registration</a>
         </li>
 

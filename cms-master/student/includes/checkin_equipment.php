@@ -2,7 +2,6 @@
 include "../includes/student_header.php";
 
 if(isset($_POST['checkin'])){
-//$studentID = $_SESSION['studentID'];
   $equipmentID = $_POST['equipmentID'];
 
   $query = "UPDATE checkouts SET timeIn = now() WHERE equipmentID = $equipmentID AND date = now() AND studentID = '0'";

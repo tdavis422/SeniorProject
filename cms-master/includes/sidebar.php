@@ -38,7 +38,7 @@
   <!--Student Login -->
   <div class="well">
     <h4>Student Login</h4>
-    <form action="student" method="post">
+    <form action="./includes/IDVerification.php" method="post">
       <div class="form-group">
         <input name="studentID" type="text" class="form-control" placeholder="Enter Student ID"/>
       </div>
