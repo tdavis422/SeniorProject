@@ -1,6 +1,8 @@
 <?php
 ob_start();
 session_start();
+include "db.php";
+include "functions.php";
 ?>
 <?php
   if(isset($_POST['studentID'])){
@@ -9,12 +11,13 @@ session_start();
 
   if ($file = fopen("../Gameroom Database Download.csv", "r")){
     foreach($file as $line){
-        list($longID, $shortID, $lname, $fname, $photo) = explode(",", $line);
-        if ($studentID === $longID || $studentID === $shortID){
-          $_SESSION['studentID'] = $studentID;
-          fclose($line);
-          header("Location: ../student");
-        }
+      $IDverify = fgetcsv($line);
+
+      if ($studentID === $IDverify[0] || $studentID === $IDverify[1]){
+        $_SESSION['studentID'] = $studentID;
+        fclose($line);
+        header("Location: ../student");
+      }
     }
   } else{
     die("File can't be opened");

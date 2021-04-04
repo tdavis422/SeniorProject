@@ -40,7 +40,7 @@
     <h4>Student Login</h4>
     <form action="./includes/IDVerification.php" method="post">
       <div class="form-group">
-        <input name="studentID" type="text" class="form-control" placeholder="Enter Student ID"/>
+        <input name="studentID" type="text" class="form-control" placeholder="Enter Student ID(Add a 0 before ID number)"/>
       </div>
       <span class="input-group-btn">
         <button name="studentLogin" class="btn btn-primary" type="submit">
