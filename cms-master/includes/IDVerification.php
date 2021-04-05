@@ -5,23 +5,33 @@ include "db.php";
 include "functions.php";
 ?>
 <?php
-  if(isset($_POST['studentID'])){
+  if(isset($_POST['studentLogin'])){
     $studentID = $_POST['studentID'];
   }
 
-  if ($file = fopen("../Gameroom Database Download.csv", "r")){
-    foreach($file as $line){
-      $IDverify = fgetcsv($line);
+  $filename='../Gameroom Database Download.csv';
+  $result = FALSE;
 
-      if ($studentID === $IDverify[0] || $studentID === $IDverify[1]){
-        $_SESSION['studentID'] = $studentID;
-        fclose($line);
-        header("Location: ../student");
-      }
+  $array = [];
+
+  if(($file = fopen("{$filename}", "r")) !== FALSE){
+    $numLines = count(file($filename));
+    while(($data = fgetcsv($file, $numLines, ",")) !== FALSE){
+      $array[] = $data;
     }
-  } else{
-    die("File can't be opened");
   }
 
-  header("Location: ../index.php");
+  fclose($file);
+
+  for($i = 0; $i < count($array); $i++){
+    if ($studentID === $array[$i][0] || $studentID === $array[$i][1]){
+      $_SESSION['studentID'] = $studentID;
+      header("Location: ../student");
+      $result = TRUE;
+    }
+  }
+
+  if($result === FALSE){
+    header("Location: ../index.php");
+  }
 ?>

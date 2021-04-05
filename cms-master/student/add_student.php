@@ -1,6 +1,8 @@
 <?php
 include "./includes/student_header.php";
 
+$studentID = $_SESSION['studentID'];
+
 if(isset($_POST['submitPingPong'])){
   $studentID = $_SESSION['studentID'];
   $equipmentPPID = $_POST['pingPong'];
@@ -11,7 +13,7 @@ if(isset($_POST['submitPingPong'])){
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
-  header("Location: ../../index.php");
+  header("Location: ../index.php");
 }
 
 else if(isset($_POST['submitPool'])){
@@ -24,7 +26,7 @@ else if(isset($_POST['submitPool'])){
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
-  header("Location: ../../index.php");
+  header("Location: ../index.php");
 }
 
 else if(isset($_POST['submitFoosball'])){
@@ -37,7 +39,7 @@ else if(isset($_POST['submitFoosball'])){
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
-  header("Location: ../../index.php");
+  header("Location: ../index.php");
 }
 
 else if(isset($_POST['submitXbox'])){
@@ -50,7 +52,7 @@ else if(isset($_POST['submitXbox'])){
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
-  header("Location: ../../index.php");
+  header("Location: ../index.php");
 }
 
 else if(isset($_POST['submitPC'])){
@@ -63,7 +65,7 @@ else if(isset($_POST['submitPC'])){
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
-  header("Location: ../../index.php");
+  header("Location: ../index.php");
 }
 
 else if(isset($_POST['submitFriend'])){
@@ -76,6 +78,6 @@ else if(isset($_POST['submitFriend'])){
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("You have been added. Please verify with worker.")</script>';
-  header("Location: ../../index.php");
+  header("Location: ../index.php");
 }
 ?>

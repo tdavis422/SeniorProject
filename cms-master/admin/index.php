@@ -1,4 +1,5 @@
 <?php include "includes/admin_header.php" ?>
+<?php include "functions.php" ?>
 
 <div id="wrapper">
 
@@ -129,7 +130,7 @@ $student_count = mysqli_num_rows($select_all_students);
       </div>
       <!-- /.row -->
 <?php
-$query = "SELECT * FROM checkouts NATURAL JOIN equipment";
+$query = "SELECT * FROM checkouts";
 $select_all_checkouts = mysqli_query($connection, $query);
 $checkouts = mysqli_num_rows($select_all_checkouts);
 
@@ -158,7 +159,7 @@ $select_all_friends = mysqli_query($connection, $query);
 $friends = mysqli_num_rows($select_all_friends);
 
  ?>
-      <!--<script type="text/javascript">
+      <script type="text/javascript">
          google.charts.load('current', {'packages':['bar']});
          google.charts.setOnLoadCallback(drawChart);
 
@@ -166,17 +167,17 @@ $friends = mysqli_num_rows($select_all_friends);
            var data = google.visualization.arrayToDataTable([
              ['Data', 'Count'],
 <?php
-/*$element_text = ['All Students', 'Ping Pong', 'Pool', 'Foosball', 'Xbox', 'PC', 'Friends'];
-$element_count = [$post_count, $published_post_count, $draft_post_count, $comment_count, $unapproved_comment_count, $user_count, $subscriber_count];
+$element_text = ['All Students', 'Ping Pong', 'Pool', 'Foosball', 'Xbox', 'PC', 'Friends'];
+$element_count = [$checkouts, $pingPong, $pool, $foosball, $xbox, $pc, $friends];
 for($i=0; $i<8; $i++){
 ?>
   ['<?=$element_text[$i]?>', <?=$element_count[$i]?>],
 <?php
-}*/
+}
 ?>
-<!--           ]);
+           ]);
 
-           /*var options = {
+           var options = {
              chart: {
                title: '',
                subtitle: '',
@@ -186,8 +187,8 @@ for($i=0; $i<8; $i++){
            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
            chart.draw(data, google.charts.Bar.convertOptions(options));
-         }*/
-       <!--</script>-->
+         }
+       </script>
        <div id="columnchart_material" style="width: auto; height: 500px;"></div>
     </div>
     <!-- /.container-fluid -->
