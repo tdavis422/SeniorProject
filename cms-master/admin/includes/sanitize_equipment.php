@@ -16,30 +16,14 @@
       alert("Sanitation and damage check complete. Redirecting to Equipment");
     }
     window.location.replace("./equipment.php");
-  };
-
-  function damaged()
-  {
-    if(confirm("Are you sure this equipment is damaged?"))
-    {
-      <?php
-        $query = "UPDATE equipment SET equipmentStatus = 'damaged', lastCleanedBy = '{$username}' WHERE equipmentID = $equipmentID";
-        $damageQuery = mysqli_query($connection, $query);
-        confirm_query($damageQuery);
-      ?>
-      console.log("Pass");
-      alert("Equipment marked as damaged. Redirecting to Equipment");
-    }
-    window.location.replace("./equipment.php");
-  };
+  }
 
   function ref()
   {
-    alert("Redirecting to Equipment")
-    window.location.replace("./equipment.php")
-  };
+    alert("Returning to Equipment Dashboard");
+    window.location.replace("./equipment.php");
+  }
 </script>
 <p> Have you sanitized and checked for damage? </p>
-<button type="button" name="sanitize" onclick="sanitize()">Sanitize</button>
-<button type="button" name="damaged" onclick="damaged()">Damaged</button>
+<button type="button" name="sanitize" onClick="sanitize()">Yes</button>
 <button type="button" name="no" onclick="ref()">No</button>
