@@ -48,7 +48,7 @@
   </tbody>
 </table>
 
-        <form action="add_student.php" method="post">
+        <form action="pingPong.php" method="post">
           <span class="input-group-btn">
             <button name="submitPingPong" class="btn btn-primary" type="submit">
              Ping Pong
@@ -56,7 +56,7 @@
           </span>
         </form><!--search form-->
 		
-        <form action="add_student.php" method="post">
+        <form action="pool.php" method="post">
           <span class="input-group-btn">
             <button name="submitPool" class="btn btn-primary" type="submit">
              Pool  
@@ -64,7 +64,7 @@
           </span>
         </form><!--search form-->
 		
-		<form action="add_student.php" method="post">
+		<form action="foosball.php" method="post">
           <span class="input-group-btn">
             <button name="submitFoosball" class="btn btn-primary" type="submit">
              Foosball 
@@ -72,7 +72,7 @@
           </span>
         </form><!--search form-->
 		
-		<form action="add_student.php" method="post">
+		<form action="xbox.php" method="post">
           <span class="input-group-btn">
             <button name="submitXbox" class="btn btn-primary" type="submit">
              Xbox 
@@ -80,7 +80,7 @@
           </span>
         </form><!--search form-->
 		
-		<form action="add_student.php" method="post">
+		<form action="pc.php" method="post">
           <span class="input-group-btn">
             <button name="submitPC" class="btn btn-primary" type="submit">
              PC 
@@ -88,7 +88,7 @@
           </span>
         </form><!--search form-->
 		
-		<form action="add_student.php" method="post">
+		<form action="students.php" method="post">
           <span class="input-group-btn">
             <button name="submitStudents" class="btn btn-primary" type="submit">
              Students 
