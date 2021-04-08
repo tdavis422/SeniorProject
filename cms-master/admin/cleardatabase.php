@@ -17,7 +17,7 @@
 					<small><?=$_SESSION['username']?></small>
 				</h1>
 			<script language="javascript">
-				//delares the function for clearing the data
+				//declares the function for clearing the data
 				function clearData()
 				{
 					//asks if the user wants to clear the database
