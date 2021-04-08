@@ -6,9 +6,10 @@ include "functions.php";
 ?>
 <?php
   if(isset($_POST['studentLogin'])){
-    $studentID = $_POST['studentID'];
+    $numID = $_POST['studentID'];
   }
 
+  $studentID = (string)$numID;
   $filename='../Gameroom Database Download.csv';
   $result = FALSE;
 
