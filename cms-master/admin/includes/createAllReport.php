@@ -47,8 +47,3 @@
 ?>
   </tbody>
 </table>
-            <a href= "report.php">
-			<button>Yes</button>
-
-            <a href= "report.php">
-			<button>No</button>

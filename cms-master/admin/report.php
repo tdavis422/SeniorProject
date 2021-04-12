@@ -25,8 +25,8 @@ switch($source){
     include "includes/createAllReport.php";
     break;
   default:
-	include "includes/createSpecReport.php";
-	break;
+	 include "includes/createSpecReport.php";
+	 break;
 }
 ?>
         </div>

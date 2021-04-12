@@ -1,4 +1,4 @@
-<?php include "includes/admin_header.php" ?>
+<?php include "admin_header.php" ?>
 <?php include "functions.php" ?>
 
 <div id="wrapper">
@@ -9,14 +9,6 @@
 if(isset($_POST['submitPool'])){
 ?>
 
-  <div id="page-wrapper">
-    <div class="container-fluid">
-      <!-- Page Heading -->
-      <div class="row">
-        <div class="col-lg-12">
-          <h1 class="page-header">
-            <small><?=$_SESSION['username']?></small>
-          </h1>
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -40,7 +32,7 @@ if(isset($_POST['submitPool'])){
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];
 				$equipmentID = $row['equipmentID'];
-				$equipmentType = $row['equipmentType'];
+				$equipmentType = $row['equipmentTypeID'];
 				$status = $row['equipmentStatus'];
 				$studentID = $row['studentID'];
 				$workerID = $row['workerID'];
@@ -70,5 +62,5 @@ if(isset($_POST['submitPool'])){
 <?php
 }
 ?>
-	
+
 <?php include "includes/admin_footer.php" ?>

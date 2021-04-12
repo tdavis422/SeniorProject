@@ -9,7 +9,7 @@ if(isset($_POST['create_equipment'])){
   $notes = $_POST['notes'];
 
   //Sends data to database for insertion
-  $query = "INSERT INTO equipment(equipmentID, equipmentType, equipmentStatus,
+  $query = "INSERT INTO equipment(equipmentID, equipmentTypeID, equipmentStatus,
     lastCleanedBy, cost, dateAdded, dateRemoved, notes) ";
   $query .= "VALUES('{$equipmentID}', '{$equipmentType}', '{$equipmentStatus}',
     NULL, '{$cost}', now(), NULL, '{$notes}')";

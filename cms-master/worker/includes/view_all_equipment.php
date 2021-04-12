@@ -14,7 +14,7 @@ $query = "SELECT * FROM equipment";
 $select_equipment = mysqli_query($connection, $query);
 while($row = mysqli_fetch_assoc($select_equipment)){
   $equipment_id = $row['equipmentID'];
-  $equipment_type = $row['equipmentType'];
+  $equipment_type = $row['equipmentTypeID'];
   $status = $row['equipmentStatus'];
   $lastCleanedBy = $row['lastCleanedBy'];
 ?>
