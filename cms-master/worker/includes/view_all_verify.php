@@ -42,7 +42,7 @@ while($row = mysqli_fetch_assoc($select_students)){
 if(isset($_GET['approve'])){
   $id = $_GET['approve'];
   $username = $_SESSION['username'];
-  $approve_query = "INSERT INTO checkouts(date, equipmentID, studentID, workerID, timeOut)";
+  $approve_query = "INSERT INTO checkouts(dateUsed, equipmentID, studentID, workerID, timeOut)";
   $approve_query .= "VALUES('{$date}', '{$id}', '{$studentID}', '{$username}', '{$timeout}')";
   $approve_student_query = mysqli_query($connection, $approve_query);
   $update_query = "UPDATE checkouts SET equipmentStatus = 'In Use' WHERE equipmentID = $equipmentID";

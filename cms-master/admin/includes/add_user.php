@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_POST['create_user'])){
   $user_firstname = $_POST['user_firstname'];
   $user_lastname = $_POST['user_lastname'];

@@ -36,6 +36,9 @@ switch($source){
   case 'add_type':
     include "includes/add_equipment_type.php";
     break;
+  case 'damaged':
+    include "includes/damaged_equipment.php";
+    break;
   default:
     include "includes/view_all_equipment.php";
     break;

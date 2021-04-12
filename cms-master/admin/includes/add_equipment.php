@@ -1,17 +1,18 @@
 <?php
+//Checks what POST parameter was set from the form at the bottom
 if(isset($_POST['create_equipment'])){
+  //Sets variables from form
   $equipmentID = $_POST['equipmentID'];
   $equipmentType = $_POST['equipmentType'];
   $equipmentStatus = "ready";
   $cost = $_POST['cost'];
   $notes = $_POST['notes'];
 
-
+  //Sends data to database for insertion
   $query = "INSERT INTO equipment(equipmentID, equipmentType, equipmentStatus,
     lastCleanedBy, cost, dateAdded, dateRemoved, notes) ";
   $query .= "VALUES('{$equipmentID}', '{$equipmentType}', '{$equipmentStatus}',
     NULL, '{$cost}', now(), NULL, '{$notes}')";
-
   $create_equipment_query = mysqli_query($connection, $query);
   confirm_query($create_equipment_query);
 ?>
@@ -19,6 +20,7 @@ if(isset($_POST['create_equipment'])){
 <?php
 }
 ?>
+<!--Form to add data for brand new equipment that has not been added to the system before-->
 <form class="" action="" method="post" enctype="multipart/form-data">
   <div class="form-group">
     <label for="equipmentID">Scan or Enter Equipment ID</label>

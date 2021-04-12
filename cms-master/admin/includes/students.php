@@ -1,3 +1,22 @@
+<?php include "includes/admin_header.php" ?>
+<?php include "functions.php" ?>
+
+<div id="wrapper">
+
+<?php include "includes/admin_navigation.php" ?>
+
+<?php
+if(isset($_POST['submitStudents'])){
+?>
+
+  <div id="page-wrapper">
+    <div class="container-fluid">
+      <!-- Page Heading -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">
+            <small><?=$_SESSION['username']?></small>
+          </h1>
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -16,7 +35,7 @@
   <tbody>
 
 <?php
-		$query = "SELECT * FROM equipment NATURAL JOIN checkouts";
+		$query = "SELECT * FROM equipment NATURAL JOIN checkouts WHERE equipmentTypeID = 6";
 		$select_equipment = mysqli_query($connection, $query);
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];
@@ -47,8 +66,9 @@
 ?>
   </tbody>
 </table>
-            <a href= "report.php">
-			<button>Yes</button>
 
-            <a href= "report.php">
-			<button>No</button>
+<?php
+}
+?>
+	
+<?php include "includes/admin_footer.php" ?>

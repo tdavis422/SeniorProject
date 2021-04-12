@@ -10,6 +10,7 @@
 	    <th>Date Removed From Use</th>
 	    <th>Notes</th>
 	    <th>Sanitize?</th>
+      <th>Damaged?</th>
 	    <th>Edit</th>
 	    <th>Remove From Use</th>
     </tr>
@@ -38,6 +39,7 @@ while($row = mysqli_fetch_assoc($select_equipment)){
   <td><?=$dateRemoved?></td>
   <td><?=$notes?></td>
   <td><a href='equipment.php?source=sanitize&sanitizeE=<?= $equipmentID ?>'>Sanitize</a></td>
+  <td><a href='equipment.php?source=damaged&damagedID=<?= $equipmentID ?>'>Damaged</a></td>
   <td><a href='equipment.php?source=edit&editEquipment=<?= $equipmentID ?> '>Edit</a></td>
   <td><a href='equipment.php?source=remove&removeEquipment=<?= $equipmentID ?> '>Remove</a></td>
 </tr>
