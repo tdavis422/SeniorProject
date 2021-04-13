@@ -1,3 +1,5 @@
+<!-- This file is for getting the data for the Ping Pong equipment.-->
+
 <?php include "admin_header.php" ?>
 <?php include "functions.php" ?>
 

@@ -1,3 +1,5 @@
+<!-- This file is for getting all the data for students and what equipment they used.-->
+
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 

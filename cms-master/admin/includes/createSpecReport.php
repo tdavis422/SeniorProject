@@ -1,3 +1,5 @@
+<!-- This file is where the admin can select a specific report on either students or a specific equipment type.-->
+
 <form action="./includes/pingPong.php" method="post">
   <span class="input-group-btn">
     <button name="submitPingPong" class="btn btn-primary" type="submit">

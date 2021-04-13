@@ -1,3 +1,5 @@
+<!-- This file is for getting the data for the Xboxes.-->
+
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 

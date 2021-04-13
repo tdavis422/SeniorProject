@@ -1,3 +1,5 @@
+<!-- This file is for when the admin wants to have a report on all students and equipment.-->
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
