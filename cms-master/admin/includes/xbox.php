@@ -35,7 +35,7 @@ if(isset($_POST['submitXbox'])){
   <tbody>
 
 <?php
-		$query = "SELECT * FROM equipment NATURAL JOIN checkouts WHERE equipmentTypeID = 4";
+		$query = "SELECT * FROM equipment RIGHT JOIN checkouts WHERE equipmentTypeID = 4";
 		$select_equipment = mysqli_query($connection, $query);
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];
@@ -70,5 +70,5 @@ if(isset($_POST['submitXbox'])){
 <?php
 }
 ?>
-	
+
 <?php include "includes/admin_footer.php" ?>

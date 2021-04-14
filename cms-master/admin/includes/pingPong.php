@@ -26,7 +26,7 @@ if(isset($_POST['submitPingPong'])){
 <tbody>
 
 <?php
-		$query = "SELECT * FROM equipment NATURAL JOIN checkouts WHERE equipmentTypeID = 1";
+		$query = "SELECT * FROM equipment RIGHT JOIN checkouts WHERE equipmentTypeID = 1";
 		$select_equipment = mysqli_query($connection, $query);
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];

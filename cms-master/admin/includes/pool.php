@@ -27,7 +27,7 @@ if(isset($_POST['submitPool'])){
   <tbody>
 
 <?php
-		$query = "SELECT * FROM equipment NATURAL JOIN checkouts WHERE equipmentTypeID = 2";
+		$query = "SELECT * FROM equipment RIGHT JOIN checkouts ON equipment.equipmentID = checkouts.equipmentID WHERE equipmentTypeID = 2";
 		$select_equipment = mysqli_query($connection, $query);
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];
