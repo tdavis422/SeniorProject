@@ -1,9 +1,7 @@
-<?php include "admin_header.php" ?>
+<?php include "../../db.php" ?>
 <?php include "functions.php" ?>
 
 <div id="wrapper">
-
-  <?php include "includes/admin_navigation.php" ?>
 
   <?php
   if(isset($_POST['submitPool'])){
