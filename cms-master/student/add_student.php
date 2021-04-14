@@ -1,8 +1,8 @@
 <?php
 include "./includes/student_header.php";
-
+//This file is the code to add a student to the checkins table and get a piece of equipment for them
 $studentID = $_SESSION['studentID'];
-
+//in the case that someone wants to use a ping pong set then they will be input into the checkouts table with an equipment
 if(isset($_POST['submitPingPong'])){
   $studentID = $_SESSION['studentID'];
   $equipmentPPID = $_POST['pingPong'];
@@ -14,8 +14,8 @@ if(isset($_POST['submitPingPong'])){
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
   header("Location: ../index.php");
-}
-
+}//if
+//in the case that someone wants to use the pool table then they will be input into the checkouts table with an equipment
 else if(isset($_POST['submitPool'])){
   $studentID = $_SESSION['studentID'];
   $equipmentpoolID = $_POST['pool'];
@@ -27,8 +27,8 @@ else if(isset($_POST['submitPool'])){
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
   header("Location: ../index.php");
-}
-
+}//else if
+//in the case that someone wants to use the foosball equipment then they will be input into the checkouts table with an equipment
 else if(isset($_POST['submitFoosball'])){
   $studentID = $_SESSION['studentID'];
   $equipmentfoosballID = $_POST['foosball'];
@@ -40,8 +40,8 @@ else if(isset($_POST['submitFoosball'])){
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
   header("Location: ../index.php");
-}
-
+}//else if
+//in the case that someone wants to use a xbox then they will be input into the checkouts table with an equipment
 else if(isset($_POST['submitXbox'])){
   $studentID = $_SESSION['studentID'];
   $equipmentxboxID = $_POST['xbox'];
@@ -53,8 +53,8 @@ else if(isset($_POST['submitXbox'])){
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
   header("Location: ../index.php");
-}
-
+}//else if
+//in the case that someone wants to use a pc then they will be input into the checkouts table with an equipment
 else if(isset($_POST['submitPC'])){
   $studentID = $_SESSION['studentID'];
   $equipmentPCID = $_POST['pc'];
@@ -66,8 +66,8 @@ else if(isset($_POST['submitPC'])){
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("Equipment has been checked out. Please verify with worker.")</script>';
   header("Location: ../index.php");
-}
-
+}//else if
+//in the case that someone wants to join a friend to play a game then they will be input into the checkouts table with an equipment
 else if(isset($_POST['submitFriend'])){
   $studentID = $_SESSION['studentID'];
   $equipmentfriendsID = $_POST['friends'];
@@ -79,5 +79,5 @@ else if(isset($_POST['submitFriend'])){
   confirm_query($verify_student_query);
   echo '<script type="text/javascript">alert("You have been added. Please verify with worker.")</script>';
   header("Location: ../index.php");
-}
+}//else if
 ?>
