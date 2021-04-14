@@ -5,8 +5,8 @@
       <th>Equipment Type</th>
       <th>Status</th>
       <th>Last Cleaned By</th>
-	  <th>Sanitize?</th>
-    <th>Remove?</th>
+	    <th>Sanitize?</th>
+      <th>Remove?</th>
     </tr>
   </thead>
   <tbody>

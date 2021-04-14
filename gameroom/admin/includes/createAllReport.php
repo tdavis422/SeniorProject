@@ -1,5 +1,3 @@
-<!-- This file is for when the admin wants to have a report on all students and equipment.-->
-
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -23,7 +21,7 @@
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];
 				$equipmentID = $row['equipmentID'];
-				$equipmentType = $row['equipmentType'];
+				$equipmentType = $row['equipmentTypeID'];
 				$status = $row['equipmentStatus'];
 				$studentID = $row['studentID'];
 				$workerID = $row['workerID'];
