@@ -1,3 +1,5 @@
+<!-- This file is used to determine what happens when the admin picks from either 'createAllReport' or 'createSpecReport.'-->
+
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 
