@@ -1,5 +1,3 @@
-<!-- This file is for getting all the data for students and what equipment they used.-->
-
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 
@@ -11,14 +9,8 @@
 if(isset($_POST['submitStudents'])){
 ?>
 
-  <div id="page-wrapper">
-    <div class="container-fluid">
-      <!-- Page Heading -->
-      <div class="row">
-        <div class="col-lg-12">
-          <h1 class="page-header">
-            <small><?=$_SESSION['username']?></small>
-          </h1>
+<a href="../report.php">Go Back</a>
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -37,7 +29,7 @@ if(isset($_POST['submitStudents'])){
   <tbody>
 
 <?php
-		$query = "SELECT * FROM equipment RIGHT JOIN checkouts WHERE equipmentTypeID = 6";
+		$query = "SELECT * FROM equipment RIGHT JOIN checkouts ON equipment.equipmentID = checkouts.equipmentID WHERE equipmentTypeID = 6";
 		$select_equipment = mysqli_query($connection, $query);
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];

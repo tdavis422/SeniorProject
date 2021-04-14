@@ -1,5 +1,3 @@
-<!-- This file is for getting the data for the Pool equipment.-->
-
 <?php include "admin_header.php" ?>
 <?php include "functions.php" ?>
 
@@ -10,6 +8,8 @@
 <?php
 if(isset($_POST['submitPool'])){
 ?>
+
+<a href="../report.php">Go Back</a>
 
 <table class="table table-bordered table-hover">
   <thead>

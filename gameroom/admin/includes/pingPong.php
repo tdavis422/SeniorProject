@@ -1,5 +1,3 @@
-<!-- This file is for getting the data for the Ping Pong equipment.-->
-
 <?php include "admin_header.php" ?>
 <?php include "functions.php" ?>
 
@@ -10,6 +8,7 @@
 <?php
 if(isset($_POST['submitPingPong'])){
 ?>
+<a href="../report.php">Go Back</a>
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -28,7 +27,7 @@ if(isset($_POST['submitPingPong'])){
 <tbody>
 
 <?php
-		$query = "SELECT * FROM equipment RIGHT JOIN checkouts WHERE equipmentTypeID = 1";
+		$query = "SELECT * FROM equipment RIGHT JOIN checkouts ON equipment.equipmentID = checkouts.equipmentID WHERE equipmentTypeID = 1";
 		$select_equipment = mysqli_query($connection, $query);
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];
