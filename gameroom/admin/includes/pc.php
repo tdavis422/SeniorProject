@@ -1,6 +1,6 @@
-<!-- This file is for getting the data for the Pool equipment.-->
+<!-- This file is for getting the data for the PCs.-->
 
-<?php include "admin_header.php" ?>
+<?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 
 <div id="wrapper">
@@ -8,9 +8,17 @@
 <?php include "includes/admin_navigation.php" ?>
 
 <?php
-if(isset($_POST['submitPool'])){
+if(isset($_POST['submitPC'])){
 ?>
 
+  <div id="page-wrapper">
+    <div class="container-fluid">
+      <!-- Page Heading -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">
+            <small><?=$_SESSION['username']?></small>
+          </h1>
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -29,12 +37,12 @@ if(isset($_POST['submitPool'])){
   <tbody>
 
 <?php
-		$query = "SELECT * FROM equipment NATURAL JOIN checkouts WHERE equipmentTypeID = 2";
+		$query = "SELECT * FROM equipment RIGHT JOIN checkouts WHERE equipmentTypeID = 5";
 		$select_equipment = mysqli_query($connection, $query);
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];
 				$equipmentID = $row['equipmentID'];
-				$equipmentType = $row['equipmentTypeID'];
+				$equipmentType = $row['equipmentType'];
 				$status = $row['equipmentStatus'];
 				$studentID = $row['studentID'];
 				$workerID = $row['workerID'];

@@ -1,4 +1,4 @@
-<!-- This file is for getting the data for the PCs.-->
+<!-- This file is for getting the data for the Xboxes.-->
 
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
@@ -8,7 +8,7 @@
 <?php include "includes/admin_navigation.php" ?>
 
 <?php
-if(isset($_POST['submitPC'])){
+if(isset($_POST['submitXbox'])){
 ?>
 
   <div id="page-wrapper">
@@ -37,7 +37,7 @@ if(isset($_POST['submitPC'])){
   <tbody>
 
 <?php
-		$query = "SELECT * FROM equipment NATURAL JOIN checkouts WHERE equipmentTypeID = 5";
+		$query = "SELECT * FROM equipment RIGHT JOIN checkouts WHERE equipmentTypeID = 4";
 		$select_equipment = mysqli_query($connection, $query);
 			while($row = mysqli_fetch_assoc($select_equipment)){
 				$checkoutsID = $row['checkoutsID'];
@@ -72,5 +72,5 @@ if(isset($_POST['submitPC'])){
 <?php
 }
 ?>
-	
+
 <?php include "includes/admin_footer.php" ?>

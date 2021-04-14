@@ -6,6 +6,7 @@
       <th>Time Checked Out</th>
       <th>studentID</th>
       <th>equipmentID</th>
+      <th>equipmentTypeID</th>
       <th>Approve</th>
       <th>Unapprove</th>
     </tr>
@@ -20,7 +21,7 @@ while($row = mysqli_fetch_assoc($select_students)){
   $timeout = $row['timeOut'];
   $studentID = $row['studentID'];
   $equipmentID = $row['equipmentID'];
-
+  $equipmentType = $row['equipmentTypeID'];
 ?>
 <tr>
   <td><?= $verifyID ?></td>
@@ -28,6 +29,7 @@ while($row = mysqli_fetch_assoc($select_students)){
   <td><?= $timeout ?></td>
   <td><?= $studentID ?></td>
   <td><?= $equipmentID ?></td>
+  <td><?= $equipmentTypeID ?></td>
   <td><a href='verifyStudents.php?approve=<?= $verifyID ?>'>Approve</a></td>
   <td><a href='verifyStudents.php?unapprove=<?= $verifyID ?>'>Unapprove</a></td>
   </tr>
