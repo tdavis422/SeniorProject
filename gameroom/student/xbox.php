@@ -1,5 +1,5 @@
 <?php include "includes/student_header.php" ?>
-
+<!-- This code will allow the student to select a xbox and scan the barcode, which will then input it in the system as that person checking it out -->
 <div id="wrapper">
 
 <?php include "includes/student_navigation.php" ?>

@@ -1,5 +1,5 @@
 <?php include "includes/student_header.php" ?>
-
+<!-- This code will allow the student to select that they are at the gameroom with a friend and are checking in for it -->
 <div id="wrapper">
 
 <?php include "includes/student_navigation.php" ?>

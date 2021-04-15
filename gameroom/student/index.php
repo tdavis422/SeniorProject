@@ -1,5 +1,5 @@
 <?php include "includes/student_header.php" ?>
-
+<!--This is the main page for the studet section in which the student selects what they want to do-->
 <div id="wrapper">
 
 <?php include "includes/student_navigation.php" ?>
@@ -9,7 +9,7 @@
       <!-- Page Heading -->
       <div class="row">
         <div class="col-lg-12">
-          
+
         </div>
       </div>
       <h3>
