@@ -66,24 +66,6 @@ Post Updated. <a href="../post.php?p_id=<?=$the_post_id?>">View Post</a> or
     <input type="text" class="form-control" name="post_title" value="<?= $post_title ?>">
   </div>
 
-  <div class="form-group">
-    <label for="post_category">Post Category</label>
-    <select class="" name="post_category" id="post_category">
-
-<?php
-$query = "SELECT * FROM categories ";
-$select_categories = mysqli_query($connection, $query);
-confirm_query($select_categories);
-while($row = mysqli_fetch_assoc($select_categories)){
-  $cat_id = $row['cat_id'];
-  $cat_title = $row['cat_title'];
- ?>
-      <option value="<?= $cat_id ?>"><?= $cat_title ?></option>
-<?php
-}
- ?>
-    </select>
-  </div>
 
   <div class="form-group">
     <label for="post_author">Post Author</label>

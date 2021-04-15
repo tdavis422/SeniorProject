@@ -1,3 +1,4 @@
+<!--Checks for what choice the user chose-->
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 
@@ -19,7 +20,7 @@ if(isset($_GET['source'])){
   $source = $_GET['source'];
 }else{
   $source = '';
-}
+}//Determines whether a source was found or not
 
 switch($source){
   case 'add_post':
@@ -31,7 +32,7 @@ switch($source){
   default:
     include "includes/view_all_comments.php";
     break;
-}
+}//Adds specific files to what the source has in the URL
 ?>
         </div>
       </div>

@@ -33,7 +33,7 @@ if(isset($_POST['add_student'])){
   $create_equipment_query = mysqli_query($connection, $query);
   confirm_query($create_equipment_query);
 ?>
-  Equipment Added: <a href='equipment.php'>View Equipment</a>
+  Student Added: <a href='index.php'>Return to Dashboard</a>
 <?php
 }
 ?>

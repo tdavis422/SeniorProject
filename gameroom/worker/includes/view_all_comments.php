@@ -8,10 +8,6 @@
       <th>Status</th>
       <th>In Response to</th>
       <th>Date</th>
-      <th>Approve</th>
-      <th>Unapprove</th>
-      <th>Delete</th>
-
     </tr>
   </thead>
   <tbody>
@@ -49,27 +45,3 @@ while($row = mysqli_fetch_assoc($select_post_id_query)){
 
   </tbody>
 </table>
-
-<?php
-if(isset($_GET['approve'])){
-  $the_comment_id = $_GET['approve'];
-  $query = "UPDATE comments SET comment_status = 'approved' WHERE comment_id = {$the_comment_id}";
-  $unapprove_comment_query = mysqli_query($connection, $query);
-  header("Location: comments.php");
-}
-
-if(isset($_GET['unapprove'])){
-  $the_comment_id = $_GET['unapprove'];
-  $query = "UPDATE comments SET comment_status = 'unapproved' WHERE comment_id = {$the_comment_id}";
-  $unapprove_comment_query = mysqli_query($connection, $query);
-  header("Location: comments.php");
-}
-
-
-if(isset($_GET['delete'])){
-  $the_user_id = $_GET['delete'];
-  $query = "DELETE FROM comments WHERE comment_id = {$the_comment_id}";
-  $delete_comment_query = mysqli_query($connection, $query);
-  header("Location: comments.php");
-}
-?>

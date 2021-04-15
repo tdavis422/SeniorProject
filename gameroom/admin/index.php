@@ -1,3 +1,4 @@
+<!--This is the dashboard for the admin/student-manager-->
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 
@@ -31,7 +32,7 @@
 $query = "SELECT * FROM posts";
 $select_all_post = mysqli_query($connection, $query);
 $post_count = mysqli_num_rows($select_all_post);
-?>
+?><!--Selects all of the posts that are in the database-->
                 <div class='huge'><?=$post_count?></div>
                 <div>Posts</div>
               </div>
@@ -58,7 +59,7 @@ $post_count = mysqli_num_rows($select_all_post);
 $query = "SELECT * FROM comments";
 $select_all_comments = mysqli_query($connection, $query);
 $comment_count = mysqli_num_rows($select_all_comments);
-?>
+?><!--Selects all of the comments that are in the database-->
                   <div class='huge'><?=$comment_count?></div>
                   <div>Comments</div>
                 </div>
@@ -85,7 +86,7 @@ $comment_count = mysqli_num_rows($select_all_comments);
 $query = "SELECT * FROM users";
 $select_all_users = mysqli_query($connection, $query);
 $user_count = mysqli_num_rows($select_all_users);
-?>
+?><!--Selects all of the users that are in the database-->
                   <div class='huge'><?=$user_count?></div>
                   <div> Users</div>
                 </div>
@@ -112,7 +113,7 @@ $user_count = mysqli_num_rows($select_all_users);
 $query = "SELECT * FROM verifystudents";
 $select_all_students = mysqli_query($connection, $query);
 $student_count = mysqli_num_rows($select_all_students);
-?>
+?><!--Selects all of the students that need verified that are in the database-->
                   <div class='huge'><?=$student_count?></div>
                   <div>Verify Students</div>
                 </div>

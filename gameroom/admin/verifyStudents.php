@@ -1,3 +1,4 @@
+<!--Allows for View All Verify to be able to view the table in a cleaner format-->
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 
@@ -19,13 +20,13 @@ if(isset($_GET['source'])){
   $source = $_GET['source'];
 }else{
   $source = '';
-}
+}//Determines whether a source was found or not
 
 switch($source){
   default:
     include "includes/view_all_verify.php";
     break;
-}
+}//Allows the View All Verify to be added into the file
 ?>
         </div>
       </div>

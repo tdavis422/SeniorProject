@@ -1,3 +1,4 @@
+<!--Allows the admin to look at profiles of workers and themselves and be able to change the role, password, and names-->
 <?php
 include "includes/admin_header.php";
 include "functions.php";
@@ -15,7 +16,7 @@ if(isset($_SESSION['username'])){
     $user_image = $row['user_image'];
     $user_role = $row['user_role'];
     $user_password = $row['user_password'];
-  }
+  }//Reads the rows from the database and when it finds the correct one, it populates the areas of interest that are able to be seen by the admins
 }
 
 if(isset($_POST['edit_user'])){
@@ -25,7 +26,6 @@ if(isset($_POST['edit_user'])){
   $username = $_POST['username'];
   $user_email = $_POST['user_email'];
   $user_password = $_POST['user_password'];
-//  $post_date = date('d-m-y');
 
   $query = "UPDATE users SET ";
   $query .= "user_firstname = '{$user_firstname}', ";
@@ -37,7 +37,7 @@ if(isset($_POST['edit_user'])){
 
   $edit_user_query = mysqli_query($connection, $query);
   confirm_query($edit_user_query);
-}
+}//If an update occurs after pressing the Update Profile button
 ?>
 <div id="wrapper">
 <?php
@@ -49,7 +49,7 @@ include "includes/admin_navigation.php";
       <div class="row">
         <div class="col-lg-12">
           <h1 class="page-header">
-            Welcome to admin <small><?= $_SESSION['username']?></small>
+             <small><?= $_SESSION['username']?></small>
           </h1>
           <form class="" action="" method="post" enctype="multipart/form-data">
             <div class="form-group">

@@ -1,4 +1,4 @@
-<!--Allows the admin to add students into the checkouts table in case the system goes down-->
+<!--Allows the worker to add students into the checkouts table in case the system goes down-->
 <?php include "includes/admin_header.php" ?>
 <?php include "functions.php" ?>
 
@@ -33,7 +33,7 @@ if(isset($_POST['add_student'])){
   $create_equipment_query = mysqli_query($connection, $query);
   confirm_query($create_equipment_query);
 ?>
-  Equipment Added: <a href='equipment.php'>View Equipment</a>
+  Student Added: <a href='index.php'>Return to Dashboard</a>
 <?php
 }
 ?>
