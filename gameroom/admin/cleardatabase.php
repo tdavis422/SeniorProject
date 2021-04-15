@@ -43,7 +43,7 @@
 								alert("Emptied the checkouts table and redirecting to dashboard");
 								window.location.replace("index.php");
 						<?php
-              }//if
+							}//if
 							else
 							{
 						?>
@@ -55,7 +55,11 @@
               }//else
 						?>
 					}//if
-
+					else
+					{
+						//calls ref() to redirect to admin index
+						ref();
+					}
 				}//cleardata()
 
 				function ref()
