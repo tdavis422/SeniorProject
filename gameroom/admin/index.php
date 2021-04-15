@@ -131,36 +131,36 @@ $student_count = mysqli_num_rows($select_all_students);
       </div>
       <!-- /.row -->
 <?php
-/*$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID";
+$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE dateUsed = CURDATE()";
 $select_all_checkouts = mysqli_query($connection, $query);
 $checkouts = mysqli_num_rows($select_all_checkouts);
 
-$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '1'";
+$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '1' AND dateUsed = CURDATE()";
 $select_all_pingPong = mysqli_query($connection, $query);
 $pingPong = mysqli_num_rows($select_all_pingPong);
 
-$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '2'";
+$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '2' AND dateUsed = CURDATE()";
 $select_all_pool = mysqli_query($connection, $query);
 $pool = mysqli_num_rows($select_all_pool);
 
-$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '3'";
+$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '3' AND dateUsed = CURDATE()";
 $select_all_foosball = mysqli_query($connection, $query);
 $foosball = mysqli_num_rows($select_all_foosball);
 
-$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '4'";
+$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '4' AND dateUsed = CURDATE()";
 $select_all_xbox = mysqli_query($connection, $query);
 $xbox = mysqli_num_rows($select_all_xbox);
 
-$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '5'";
+$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '5' AND dateUsed = CURDATE()";
 $select_all_pc = mysqli_query($connection, $query);
 $pc = mysqli_num_rows($select_all_pc);
 
-$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '6'";
+$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '6' AND dateUsed = CURDATE()";
 $select_all_friends = mysqli_query($connection, $query);
 $friends = mysqli_num_rows($select_all_friends);
-*/
+
  ?>
-      <!--<script type="text/javascript">
+      <script type="text/javascript">
          google.charts.load('current', {'packages':['bar']});
          google.charts.setOnLoadCallback(drawChart);
 
@@ -168,13 +168,13 @@ $friends = mysqli_num_rows($select_all_friends);
            var data = google.visualization.arrayToDataTable([
              ['Data', 'Count'],
 <?php
-/*$element_text = ['All Students', 'Ping Pong', 'Pool', 'Foosball', 'Xbox', 'PC', 'Friends'];
+$element_text = ['All Students', 'Ping Pong', 'Pool', 'Foosball', 'Xbox', 'PC', 'Friends'];
 $element_count = [$checkouts, $pingPong, $pool, $foosball, $xbox, $pc, $friends];
-for($i=0; $i<8; $i++){
+for($i=0; $i<7; $i++){
 ?>
   ['<?=$element_text[$i]?>', <?=$element_count[$i]?>],
 <?php
-}*/
+}
 ?>
            ]);
 
@@ -189,7 +189,7 @@ for($i=0; $i<8; $i++){
 
            chart.draw(data, google.charts.Bar.convertOptions(options));
          }
-       </script>-->
+       </script>
        <div id="columnchart_material" style="width: auto; height: 500px;"></div>
     </div>
     <!-- /.container-fluid -->
