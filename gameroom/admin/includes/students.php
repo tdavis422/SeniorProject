@@ -1,3 +1,5 @@
+<!-- This file is for making a report on students and what equipment they used.-->
+
 <?php include "../../includes/db.php" ?>
 <?php include "../functions.php" ?>
 

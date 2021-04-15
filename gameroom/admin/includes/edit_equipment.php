@@ -1,3 +1,5 @@
+<!-- This file is for what happens when the admin wants to edit a piece of equipment's status, cost, and/or notes.-->
+
 <?php
 if(isset($_POST['edit_equipment'])){
   $equipmentID = $_GET['editEquipment'];

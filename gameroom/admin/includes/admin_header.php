@@ -1,3 +1,5 @@
+<!-- This file will only be displayed by an admin to show they are on an admin page.-->
+
 	<?php
 ob_start();
 session_start();

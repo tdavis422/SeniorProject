@@ -1,3 +1,5 @@
+<!--This file is for what happens when a post gets changed.-->
+
 <?php
 if(isset($_GET['p_id'])){
   $the_post_id = $_GET['p_id'];

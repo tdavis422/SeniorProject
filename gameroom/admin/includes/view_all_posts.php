@@ -1,3 +1,5 @@
+<!-- This file is for what happens when the admin wants to look at all the posts in the system and can delete posts if needed.-->
+
 <?php
 include "delete_modal.php";
 

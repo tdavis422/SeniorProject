@@ -1,3 +1,5 @@
+<!-- This file is for what happens when a user is added into the system.-->
+
 <?php
 
 if(isset($_POST['create_user'])){

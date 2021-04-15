@@ -1,3 +1,5 @@
+<!-- This file is what happens when a student gets their ID approved or unapproved.-->
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>

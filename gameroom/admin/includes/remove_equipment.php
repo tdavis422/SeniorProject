@@ -1,3 +1,5 @@
+<!-- This file is for what happens when a piece of equipment gets removed from the system.-->
+
 <?php
 //Pulls the equipment ID from the sending page
   $equipmentID = $_GET['removeEquipment'];

@@ -1,3 +1,5 @@
+<!-- This file is for what happens when an admin wants to make changes to a user.-->
+
 <?php
 if(isset($_GET['edit_user'])){
   $the_user_id = $_GET['edit_user'];

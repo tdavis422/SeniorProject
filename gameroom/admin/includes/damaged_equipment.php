@@ -1,3 +1,5 @@
+<!-- This file is for what happens when the admin wants to report a piece of equipment is damaged.-->
+
 <?php
 $username = $_SESSION['username'];
 $equipmentID = $_GET['damagedID'];

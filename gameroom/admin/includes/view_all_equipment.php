@@ -1,3 +1,5 @@
+<!-- This file is for displaying all the equipment and their attributes in the system.-->
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>

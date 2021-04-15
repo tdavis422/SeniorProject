@@ -1,3 +1,5 @@
+<!-- This file is what connects the database to the system.-->
+
 <?php
 $db['db_host'] = "localhost";
 $db['db_user'] = "gameroom";

@@ -1,3 +1,5 @@
+<!-- This file is for displaying all users and can change their status or remove them.-->
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>

@@ -1,3 +1,5 @@
+<!-- This file is what happens when the admin wants to look at all the comments in the system and can approve, disapprove, or delete a comment.-->
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -11,7 +13,7 @@
       <th>Approve</th>
       <th>Unapprove</th>
       <th>Delete</th>
-
+	  
     </tr>
   </thead>
   <tbody>

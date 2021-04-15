@@ -1,3 +1,5 @@
+<!-- This file is for what happens when you want to make a post.--> 
+
 <?php
 if(isset($_POST['create_post'])){
   $post_author = $_POST['author'];

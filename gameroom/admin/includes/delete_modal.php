@@ -1,3 +1,5 @@
+<!-- This file is for deleting posts.-->
+
 <!-- Trigger the modal with a button https://www.w3schools.com/bootstrap/bootstrap_modal.asp -->
 <!--
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>

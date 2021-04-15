@@ -1,3 +1,5 @@
+<!-- This file is for what happens when the admin wants to update a piece of equipment from dirty to clean.-->
+
 <?php
   $username = $_SESSION['username'];
   $equipmentID = $_GET['sanitizeE'];

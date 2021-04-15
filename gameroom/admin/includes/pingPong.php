@@ -1,4 +1,5 @@
-<?php include "../../includes/db.php" ?>
+<!-- This file is for making a report on Ping Pong.-->
+
 <?php include "../../includes/db.php" ?>
 <?php include "../functions.php" ?>
 
