@@ -1,9 +1,7 @@
-<?php include "includes/admin_header.php" ?>
-<?php include "functions.php" ?>
+<?php include "../../includes/db.php" ?>
+<?php include "../functions.php" ?>
 
 <div id="wrapper">
-
-  <?php include "includes/admin_navigation.php" ?>
 
   <?php
   if(isset($_POST['submitFoosball'])){
@@ -64,4 +62,4 @@
   }
   ?>
 
-  <?php include "includes/admin_footer.php" ?>
+</div>
