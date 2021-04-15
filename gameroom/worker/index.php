@@ -189,7 +189,7 @@ for($i=0; $i<8; $i++){
 
            chart.draw(data, google.charts.Bar.convertOptions(options));
          }
-       <!--</script>-->
+       </script>
        <div id="columnchart_material" style="width: auto; height: 500px;"></div>
     </div>
     <!-- /.container-fluid -->
