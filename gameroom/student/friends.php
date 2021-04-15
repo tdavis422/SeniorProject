@@ -16,7 +16,6 @@
       </div>
 
       <div class="well">
-        <h4>Scan equipment barcode:</h4>
         <form action="add_student.php" method="post">
           <div class="form-group">
             <input name="friends" type="text" class="form-control" autofocus placeholder="Enter Student ID"/>
