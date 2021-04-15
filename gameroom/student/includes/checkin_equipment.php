@@ -1,6 +1,8 @@
 <?php
-include "../includes/student_header.php";
 //This file deals with the checkins of equipment
+
+include "../includes/student_header.php";
+
 $studentID = $_SESSION['studentID'];
 
 if(isset($_POST['checkin'])){
