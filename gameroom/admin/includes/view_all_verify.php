@@ -8,7 +8,6 @@
       <th>Time Checked Out</th>
       <th>studentID</th>
       <th>equipmentID</th>
-      <th>equipmentTypeID</th>
       <th>Approve</th>
       <th>Unapprove</th>
     </tr>
@@ -31,7 +30,6 @@ while($row = mysqli_fetch_assoc($select_students)){
   <td><?= $timeout ?></td>
   <td><?= $studentID ?></td>
   <td><?= $equipmentID ?></td>
-  <td><?= $equipmentTypeID ?></td>
   <td><a href='verifyStudents.php?approve=<?= $verifyID ?>'>Approve</a></td>
   <td><a href='verifyStudents.php?unapprove=<?= $verifyID ?>'>Unapprove</a></td>
   </tr>
@@ -53,7 +51,7 @@ if(isset($_GET['approve'])){
   $update_query = "UPDATE equipment SET equipmentStatus = 'In Use' WHERE equipmentID = $equipmentID" ;
   $update_sent_query = mysqli_query($connection, $update_query);
   confirm_query($update_sent_query);
-  $query = "DELETE FROM verifyStudents WHERE verifyID = $id";
+  $query = "DELETE FROM verifystudents WHERE verifyID = $id";
   $update_verify_query = mysqli_query($connection, $query);
   confirm_query($update_verify_query);
   echo "<script type='text/javascript'>alert('Student has been checked in. Returning to Verify Students.')</script>";

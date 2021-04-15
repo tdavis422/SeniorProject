@@ -1,5 +1,3 @@
-<!-- This file is for allowing workers to verify students.-->
-
 <table class="table table-bordered table-hover">
   <thead>
     <tr>
@@ -49,7 +47,7 @@ if(isset($_GET['approve'])){
   $approve_student_query = mysqli_query($connection, $approve_query);
   $update_query = "UPDATE checkouts SET equipmentStatus = 'In Use' WHERE equipmentID = $equipmentID";
   $update_sent_query = mysqli_query($connection, $update_sent_query);
-  $query = "DELETE FROM verifyStudents WHERE verifyIDID = $id";
+  $query = "DELETE FROM verifystudents WHERE verifyIDID = $id";
   $update_verify_query = mysqli_query($connection, $update_verify_query);
   echo "</script type='text/javascript'>alert('Student has been checked in. Returning to Verify Students.')</script>";
   header("Location: verifyStudents.php");
