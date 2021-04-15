@@ -96,6 +96,10 @@ if(isset($_SESSION['username'])){
                 <a href="verifyStudents.php"><i class="fa fa-fw fa-arrows-v"></i> Verify Students </a>
             </li>
 
+            <li>
+              <a href="addStudents.php"><i class="fa fa-fw fa-arrows-v"></i> Add Students </a>
+            </li>
+
             <li class="">
                 <a href="comments.php"><i class="fa fa-fw fa-file"></i> Comments </a>
             </li>

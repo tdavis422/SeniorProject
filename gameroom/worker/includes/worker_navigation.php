@@ -77,6 +77,10 @@ if(isset($_SESSION['username'])){
             </li>
 
             <li>
+              <a href="addStudents.php"><i class="fa fa-fw fa-arrows-v"></i> Add Students </a>
+            </li>
+
+            <li>
                 <a href="comments.php"><i class="fa fa-fw fa-file"></i> Comments </a>
             </li>
 
