@@ -1,8 +1,10 @@
 <?php
 include "./includes/student_header.php";
+
 //This file is the code to add a student to the checkins table and get a piece of equipment for them
 $studentID = $_SESSION['studentID'];
-//in the case that someone wants to use a ping pong set then they will be input into the checkouts table with an equipment
+
+//In the case that someone wants to use a ping pong set then they will be input into the checkouts table with an equipment
 if(isset($_POST['submitPingPong'])){
   $studentID = $_SESSION['studentID'];
   $equipmentPPID = $_POST['pingPong'];
