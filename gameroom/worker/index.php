@@ -1,3 +1,5 @@
+<!-- This file is for displaying the dashboard for the worker side.-->
+
 <?php include "includes/worker_header.php" ?>
 
 <div id="wrapper">

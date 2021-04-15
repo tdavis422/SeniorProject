@@ -1,3 +1,5 @@
+<!-- This file is for allowing a worker to edit a post.-->
+
 <?php
 if(isset($_GET['p_id'])){
   $the_post_id = $_GET['p_id'];

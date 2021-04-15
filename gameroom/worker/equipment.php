@@ -1,3 +1,5 @@
+<!-- This file is for workers to pick clean, remove, or view equipment.-->
+
 <?php include "includes/worker_header.php" ?>
 <?php include "functions.php" ?>
 

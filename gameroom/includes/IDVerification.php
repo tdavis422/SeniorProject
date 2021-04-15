@@ -1,3 +1,5 @@
+<!-- This file is to allow the system to verify IDs of students.-->
+
 <?php
 ob_start();
 session_start();

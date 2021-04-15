@@ -1,3 +1,5 @@
+<!-- This file is for allowing workers to change a piece of equipment's status from being usable to not usable.-->
+
 <?php
 //Pulls the equipment ID from the sending page
   $equipmentID = $_GET['removeEquipment'];

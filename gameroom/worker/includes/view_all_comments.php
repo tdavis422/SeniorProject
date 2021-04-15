@@ -1,3 +1,5 @@
+<!-- This file allows workers to see comments in the system.-->
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>

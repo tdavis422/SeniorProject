@@ -1,3 +1,5 @@
+<!-- This file is for saying whether a query passed or failed.-->
+
 <?php
 
 function confirm_query($result){

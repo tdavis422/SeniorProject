@@ -1,3 +1,5 @@
+<!-- This file is for allowing workers to verify students.-->
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>

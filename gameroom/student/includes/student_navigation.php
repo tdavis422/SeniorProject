@@ -1,3 +1,5 @@
+<!-- This file is for navigating the student side of the system.-->
+
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

@@ -1,3 +1,5 @@
+<!-- This file is for allowing workers to add comments to posts.-->
+
 <?php include "includes/worker_header.php" ?>
 <?php include "functions.php" ?>
 

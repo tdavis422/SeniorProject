@@ -1,3 +1,5 @@
+<!-- This file is for allowing the workers to see all users in the system.-->
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>

@@ -1,3 +1,5 @@
+<!-- This file is for what all users see after they log into the system.-->
+
 <div class="col-md-4">
 
   <!-- Blog Search Well -->

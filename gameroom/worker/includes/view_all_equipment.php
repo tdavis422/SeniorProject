@@ -1,3 +1,5 @@
+<!-- This file is for allowing workers to view all the equipment in the system.-->
+
 <table class="table table-bordered table-hover">
   <thead>
     <tr>

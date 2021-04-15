@@ -1,3 +1,5 @@
+<!-- This file is for allowing workers to view all the posts in the system.-->
+
 <?php
 include "worker_modal.php";
 

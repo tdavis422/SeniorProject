@@ -1,3 +1,5 @@
+<!-- This file is for how the system displays the navigation.-->
+
 <?php
 session_start();
 ?>

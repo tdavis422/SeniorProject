@@ -1,3 +1,5 @@
+<!-- This file is for allowing the system to do logins.-->
+
 <?php
 include "db.php";
 session_start();

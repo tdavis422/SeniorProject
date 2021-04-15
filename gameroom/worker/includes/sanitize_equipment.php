@@ -1,3 +1,5 @@
+<!-- This file is for allowing workers to say whether a piece of equipment is dirty or clean.-->
+
 <?php
   $username = $_SESSION['username'];
   $equipmentID = $_GET['sanitizeE'];

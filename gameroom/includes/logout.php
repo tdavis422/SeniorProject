@@ -1,3 +1,5 @@
+<!-- This file is for what happens when a user log outs of the system.-->
+
 <?php
 session_start();
 

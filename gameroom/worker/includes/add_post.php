@@ -1,3 +1,5 @@
+<!-- This file is for allowing workers to add a post.-->
+
 <?php
 if(isset($_POST['create_post'])){
   $post_author = $_POST['author'];
