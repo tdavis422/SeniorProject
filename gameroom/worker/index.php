@@ -170,7 +170,7 @@ $friends = mysqli_num_rows($select_all_friends);
 <?php
 $element_text = ['All Students', 'Ping Pong', 'Pool', 'Foosball', 'Xbox', 'PC', 'Friends'];
 $element_count = [$checkouts, $pingPong, $pool, $foosball, $xbox, $pc, $friends];
-for($i=0; $i<8; $i++){
+for($i=0; $i<7; $i++){
 ?>
   ['<?=$element_text[$i]?>', <?=$element_count[$i]?>],
 <?php
