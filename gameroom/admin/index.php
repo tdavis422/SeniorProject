@@ -131,7 +131,7 @@ $student_count = mysqli_num_rows($select_all_students);
       </div>
       <!-- /.row -->
 <?php
-/*$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID";
+$query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID";
 $select_all_checkouts = mysqli_query($connection, $query);
 $checkouts = mysqli_num_rows($select_all_checkouts);
 
@@ -158,9 +158,9 @@ $pc = mysqli_num_rows($select_all_pc);
 $query = "SELECT * FROM checkouts LEFT JOIN equipment ON checkouts.equipmentID = equipment.equipmentID WHERE equipmentTypeID = '6'";
 $select_all_friends = mysqli_query($connection, $query);
 $friends = mysqli_num_rows($select_all_friends);
-*/
+
  ?>
-      <!--<script type="text/javascript">
+      <script type="text/javascript">
          google.charts.load('current', {'packages':['bar']});
          google.charts.setOnLoadCallback(drawChart);
 
@@ -168,13 +168,13 @@ $friends = mysqli_num_rows($select_all_friends);
            var data = google.visualization.arrayToDataTable([
              ['Data', 'Count'],
 <?php
-/*$element_text = ['All Students', 'Ping Pong', 'Pool', 'Foosball', 'Xbox', 'PC', 'Friends'];
+$element_text = ['All Students', 'Ping Pong', 'Pool', 'Foosball', 'Xbox', 'PC', 'Friends'];
 $element_count = [$checkouts, $pingPong, $pool, $foosball, $xbox, $pc, $friends];
-for($i=0; $i<8; $i++){
+for($i=0; $i<7; $i++){
 ?>
   ['<?=$element_text[$i]?>', <?=$element_count[$i]?>],
 <?php
-}*/
+}
 ?>
            ]);
 
@@ -189,7 +189,7 @@ for($i=0; $i<8; $i++){
 
            chart.draw(data, google.charts.Bar.convertOptions(options));
          }
-       </script>-->
+       </script>
        <div id="columnchart_material" style="width: auto; height: 500px;"></div>
     </div>
     <!-- /.container-fluid -->
