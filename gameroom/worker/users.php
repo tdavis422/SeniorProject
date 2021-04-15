@@ -1,3 +1,5 @@
+<!-- This file is for showing all users in the system.-->
+
 <?php include "includes/worker_header.php" ?>
 <?php include "functions.php" ?>
 
@@ -24,9 +26,6 @@ if(isset($_GET['source'])){
 switch($source){
   case 'add_user':
     include "includes/add_user.php";
-    break;
-  case 'edit_user':
-    include "includes/edit_user.php";
     break;
   default:
     include "includes/view_all_users.php";

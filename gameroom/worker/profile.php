@@ -1,3 +1,5 @@
+<!-- This file is for showing the worker's account in the system.-->
+
 <?php
 include "includes/worker_header.php";
 include "functions.php";

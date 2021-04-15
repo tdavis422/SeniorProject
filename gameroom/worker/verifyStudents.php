@@ -1,3 +1,5 @@
+<!-- This file is to allow workers to view all users in the system.-->
+
 <?php include "includes/worker_header.php" ?>
 <?php include "functions.php" ?>
 

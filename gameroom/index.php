@@ -1,3 +1,5 @@
+<!-- This file is what displays before any user logs into the system.-->
+
 <?php include "includes/db.php"; ?>
 <?php include "includes/header.php"; ?>
   <!-- Navigation -->
