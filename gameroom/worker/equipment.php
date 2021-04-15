@@ -23,8 +23,11 @@ if(isset($_GET['source'])){
 
 switch($source){
   case 'sanitize':
-	include "includes/sanitize_equipment.php";
-	break;
+	 include "includes/sanitize_equipment.php";
+	 break;
+  case 'remove':
+    include "includes/remove_equipment.php";
+    break;
   default:
     include "includes/view_all_equipment.php";
     break;
