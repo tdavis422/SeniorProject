@@ -27,8 +27,8 @@ switch($source){
   case 'sanitize':
 	 include "includes/sanitize_equipment.php";
 	 break;
-  case 'remove':
-    include "includes/remove_equipment.php";
+  case 'damage':
+    include "includes/damaged_equipment.php";
     break;
   default:
     include "includes/view_all_equipment.php";
