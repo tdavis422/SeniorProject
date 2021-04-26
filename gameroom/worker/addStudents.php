@@ -1,10 +1,10 @@
 <!--Allows the worker to add students into the checkouts table in case the system goes down-->
-<?php include "includes/admin_header.php" ?>
+<?php include "includes/worker_header.php" ?>
 <?php include "functions.php" ?>
 
 <div id="wrapper">
 
-<?php include "includes/admin_navigation.php" ?>
+<?php include "includes/worker_navigation.php" ?>
 
   <div id="page-wrapper">
     <div class="container-fluid">
