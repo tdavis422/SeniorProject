@@ -45,7 +45,6 @@ if(isset($_GET['approve'])){
   $approve_query = "INSERT INTO checkouts(dateUsed, equipmentID, studentID, workerID, timeOut)";
   $approve_query .= "VALUES('{$date}', '{$equipmentID}', '{$studentID}', '{$username}', '{$timeout}')";
   $approve_student_query = mysqli_query($connection, $approve_query);
-  confirm_query($approve_student_query);
   $update_query = "UPDATE equipment SET equipmentStatus = 'In Use' WHERE equipmentID = $equipmentID";
   $update_sent_query = mysqli_query($connection, $update_sent_query);
   $query = "DELETE FROM verifystudents WHERE verifyID = $id";
