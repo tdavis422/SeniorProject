@@ -11,7 +11,7 @@
             <li>
                 <a href="pingPong.php"> Ping Pong</a>
             </li>
-            
+
             <li>
                 <a href="pool.php"> Pool </a>
             </li>
@@ -35,6 +35,9 @@
             <li>
                 <a href="checkin.php"> Check In </a>
             </li>
+
+            <li>
+              <a href="../../index.php">Home Page</a>
         </ul>
     </div>
 </nav>
