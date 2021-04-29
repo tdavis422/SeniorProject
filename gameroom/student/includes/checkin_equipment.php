@@ -9,7 +9,7 @@ if(isset($_POST['checkin'])){
   $equipmentID = $_POST['equipmentID'];
 }//if
   //when an equipment is checked in they are set in the database as Needs Sanitized
-  $query = "UPDATE checkouts SET timeIn = CURTIME() WHERE equipmentID = '{$equipmentID}' AND dateUsed = CURDATE() AND studentID = '{$studentID}'";
+  $query = "UPDATE checkouts SET timeIn = CURTIME() WHERE equipmentID = '{$equipmentID}' AND dateUsed = CURDATE() AND studentID = '{$studentID};'";
   $checkin_query = mysqli_query($connection, $query);
   confirm_query($checkin_query);
   $update_equipment = "UPDATE equipment set equipmentStatus = 'Needs Sanitized' WHERE equipmentID = $equipmentID";
