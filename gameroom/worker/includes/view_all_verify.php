@@ -48,7 +48,7 @@ if(isset($_GET['approve'])){
   $update_query = "UPDATE equipment SET equipmentStatus = 'In Use' WHERE equipmentID = $equipmentID";
   $update_sent_query = mysqli_query($connection, $update_sent_query);
   $query = "DELETE FROM verifystudents WHERE verifyID = $id";
-  $update_verify_query = mysqli_query($connection, $update_verify_query);
+  $update_verify_query = mysqli_query($connection, $query);
   confirm_query($update_verify_query);
   echo "<script type='text/javascript'>alert('Student has been checked in. Returning to Verify Students.')</script>";
   header("Location: verifyStudents.php");
