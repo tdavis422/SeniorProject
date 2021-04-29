@@ -8,7 +8,7 @@
       <th>Status</th>
       <th>Last Cleaned By</th>
 	    <th>Sanitize?</th>
-      <th>Remove?</th>
+      <th>Damaged?</th>
     </tr>
   </thead>
   <tbody>
@@ -28,7 +28,6 @@ while($row = mysqli_fetch_assoc($select_equipment)){
   <td><?=$lastCleanedBy?></td>
   <td><a href='equipment.php?source=sanitize&sanitizeE=<?= '$equipment_id' ?>'>Sanitize?</a></td>
   <td><a href='equipment.php?source=damage&damageEquipment=<?'$equipment_id' ?>'>Damaged?</a></td>
-  <td>
 </tr>
 <?php
 }
