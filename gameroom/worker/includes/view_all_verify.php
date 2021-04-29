@@ -46,13 +46,12 @@ if(isset($_GET['approve'])){
   $approve_query .= "VALUES('{$date}', '{$equipmentID}', '{$studentID}', '{$username}', '{$timeout}')";
   $approve_student_query = mysqli_query($connection, $approve_query);
   confirm_query($approve_student_query);
-  $update_query = "UPDATE checkouts SET equipmentStatus = 'In Use' WHERE equipmentID = $equipmentID";
+  $update_query = "UPDATE equipment SET equipmentStatus = 'In Use' WHERE equipmentID = $equipmentID";
   $update_sent_query = mysqli_query($connection, $update_sent_query);
-  confirm_query($update_sent_query);
   $query = "DELETE FROM verifystudents WHERE verifyID = $id";
   $update_verify_query = mysqli_query($connection, $update_verify_query);
   confirm_query($update_verify_query);
-  echo "</script type='text/javascript'>alert('Student has been checked in. Returning to Verify Students.')</script>";
+  echo "<script type='text/javascript'>alert('Student has been checked in. Returning to Verify Students.')</script>";
   header("Location: verifyStudents.php");
 }
 
