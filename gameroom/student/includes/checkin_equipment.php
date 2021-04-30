@@ -14,5 +14,6 @@ if(isset($_POST['checkin'])){
   confirm_query($checkin_query);
   $update_equipment = "UPDATE equipment set equipmentStatus = 'Needs Sanitized' WHERE equipmentID = $equipmentID";
   $update_equipment_query = mysqli_query($connection, $update_equipment);
+  confirm_query($update_equipment_query);
   header("Location: ../../index.php");
 ?>
