@@ -1,8 +1,8 @@
-<?php include "includes/student_header.php" ?>
+<?php include "./includes/student_header.php" ?>
 <!-- This code will allow the student to select what they are checking in and send a request to the database to be selected as checked in -->
 <div id="wrapper">
 
-<?php include "includes/student_navigation.php" ?>
+<?php include "./includes/student_navigation.php" ?>
 
   <div id="page-wrapper">
     <div class="container-fluid">
@@ -35,4 +35,4 @@
 </div>
 <!-- /#wrapper -->
 
-<?php include "includes/student_footer.php" ?>
+<?php include "./includes/student_footer.php" ?>
