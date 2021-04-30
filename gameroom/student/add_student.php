@@ -11,7 +11,7 @@ if(isset($_POST['submitPingPong'])){
   $equipmentType = 1;
 
   $query = "INSERT INTO verifystudents(date, timeOut, studentID, equipmentID, equipmentTypeID)";
-  $query .= "VALUES(CURDATE(), CURTIME(), '$studentID', '{$equipmentPPID}', '{$equipmentType}')";
+  $query .= "VALUES(CURDATE(), CURTIME(), '{$studentID}', '{$equipmentPPID}', '{$equipmentType}')";
 
   $verify_student_query = mysqli_query($connection, $query);
   confirm_query($verify_student_query);
