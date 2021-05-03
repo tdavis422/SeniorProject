@@ -27,7 +27,12 @@ include "functions.php";
   fclose($file);
 
   for($i = 0; $i < count($array); $i++){
-    if ($studentID === $array[$i][0] || $studentID === $array[$i][1]){
+    if ($studentID === $array[$i][0]){
+      $_SESSION['studentID'] = $studentID;
+      header("Location: ../student");
+      $result = TRUE;
+    }
+    else if ($studentID === $array[$i][1]){
       $_SESSION['studentID'] = $studentID;
       header("Location: ../student");
       $result = TRUE;

@@ -17,7 +17,7 @@
 
       <div class="well">
         <h4>Scan equipment barcode:</h4>
-        <form action="includes/checkin_equipment.php" method="post">
+        <form action="./checkin_equipment.php" method="post">
           <div class="form-group">
             <input name="equipmentID" type="text" class="form-control" autofocus/>
           </div>
