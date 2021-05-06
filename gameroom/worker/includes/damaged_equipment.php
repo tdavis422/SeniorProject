@@ -25,6 +25,6 @@ $equipmentID = $_GET['damagedID'];
     window.location.replace("./equipment.php");
   }
 </script>
-<p> Have you sanitized and checked for damage? </p>
+<p> Are you sure the equipment is damaged? </p>
 <button type="button" name="sanitize" onClick="damaged()">Yes</button>
 <button type="button" name="no" onclick="ref()">No</button>
