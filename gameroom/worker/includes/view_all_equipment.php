@@ -27,7 +27,7 @@ while($row = mysqli_fetch_assoc($select_equipment)){
   <td><?=$status?></td>
   <td><?=$lastCleanedBy?></td>
   <td><a href='equipment.php?source=sanitize&sanitizeE=<?= '$equipment_id' ?>'>Sanitize?</a></td>
-  <td><a href='equipment.php?source=damage&damageEquipment=<?'$equipment_id' ?>'>Damaged?</a></td>
+  <td><a href='equipment.php?source=damage&damagedID=<?= '$equipment_id' ?>'>Damaged?</a></td>
 </tr>
 <?php
 }
