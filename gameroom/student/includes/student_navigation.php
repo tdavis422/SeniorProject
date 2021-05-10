@@ -21,7 +21,7 @@
       			</li>
 
             <li>
-                <a href="xbox.php"> Xbox </a>
+                <a href="console.php"> Console </a>
             </li>
 
             <li>
