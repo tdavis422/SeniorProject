@@ -24,7 +24,7 @@ if(isset($_GET['source'])){
 
 switch($source){
   case 'allReport':
-    include "includes/createAllReport.php";
+    header("Location: ./includes/createAllReport.php");
     break;
   default:
 	 include "includes/createSpecReport.php";

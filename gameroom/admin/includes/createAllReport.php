@@ -1,4 +1,5 @@
 <!-- This file is for what happens when the admin wants to make a report on all students and equipment.-->
+<?php include "../../includes/db.php" ?>
 
 <table class="table table-bordered table-hover">
     <thead>
